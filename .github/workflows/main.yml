@@ -31,7 +31,7 @@ jobs:
       
       - name: Get PoB Release information
         id: last_release
-        uses: thebritican/fetch-latest-release@v2
+        uses: thebritican/fetch-latest-release@v2.0.0
         with:
           repo_path: "PathOfBuildingCommunity/PathOfBuilding"
 
