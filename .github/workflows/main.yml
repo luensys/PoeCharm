@@ -40,11 +40,9 @@ jobs:
       - name: Check files
         run: |
           ls -al
-          ls -al ./PathOfBuildingCommunity
           
       - name: PoB unzip
         run: |
-          mkdir PathOfBuildingCommunity
           unzip PathOfBuilding*.zip -d ./PathOfBuildingCommunity
         
       - name: Archive Release
