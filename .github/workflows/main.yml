@@ -56,8 +56,7 @@ jobs:
         with:
           repository: "PathOfBuildingCommunity/PathOfBuilding"
           latest: true
-          zipBall: true
-          fileName: ""
+          fileName: "PathOfBuildingCommunity-Portable-${{ POB_TAG }}.zip"
           
       - name: PoB unzip
         run: |
