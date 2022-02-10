@@ -32,6 +32,8 @@ jobs:
       - name: Get PoB Release information
         id: last_release
         uses: InsonusK/get-latest-release@v1.0.1
+        with:
+          myToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Print result"
         run: |
