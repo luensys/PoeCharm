@@ -45,9 +45,7 @@ jobs:
         run: |
           ls -al
           dirs=(PathOfBuilding*/)
-          echo "0 is ${dirs[0]}\n\r"
-          echo "1 is ${dirs[1]}\n\r"
-          echo "2 is ${dirs[2]}\n\r"
+          mv ${dirs[0]} PathOfBuildingCommunity
         
       - name: Archive Release
         uses: thedoctor0/zip-release@master
