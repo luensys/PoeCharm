@@ -37,6 +37,11 @@ jobs:
           latest: true
           zipBall: true
           
+      - name: Check files
+        run: |
+          ls -al
+          ls -al ./PathOfBuildingCommunity
+          
       - name: PoB unzip
         run: unzip PathOfBuildingCommunity*.zip -d ./PathOfBuildingCommunity
         
