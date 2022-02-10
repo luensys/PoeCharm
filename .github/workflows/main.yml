@@ -48,7 +48,7 @@ jobs:
           echo "body: ${{ steps.last_release.outputs.body }}"
           echo "draft: ${{ steps.last_release.outputs.draft }}"
           echo "prerelease: ${{ steps.last_release.outputs.prerelease }}"
-          echo "pobtag: ${{ POB_TAG }}"
+          echo "pobtag: ${{ env.POB_TAG }}"
 
       # Add PoB
       - name: Add PoB files
