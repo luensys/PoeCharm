@@ -60,14 +60,8 @@ jobs:
           
       - name: PoB unzip
         run: |
-          unzip PathOfBuilding*.zip
+          unzip PathOfBuildingCommunity*.zip -d ./PathOfBuildingCommunity
           
-      - name: PoB Directory modify
-        run: |
-          ls -al
-          dirs=(PathOfBuilding*/)
-          mv ${dirs[0]} PathOfBuildingCommunity
-        
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
