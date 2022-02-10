@@ -37,10 +37,6 @@ jobs:
           latest: true
           zipBall: true
           
-      - name: Check files
-        run: |
-          ls -al
-          
       - name: PoB unzip
         run: |
           unzip PathOfBuilding*.zip -d ./PathOfBuildingCommunity
@@ -56,3 +52,9 @@ jobs:
         run: |
           ls -al
           ls -al ./PathOfBuildingCommunity
+          
+      - name: zip file release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "PoeCharm_v${{ steps.date.outputs.date }}.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}
