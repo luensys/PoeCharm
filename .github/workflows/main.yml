@@ -34,6 +34,10 @@ jobs:
         uses: thebritican/fetch-latest-release@v2.0.0
         with:
           repo_path: "PathOfBuildingCommunity/PathOfBuilding"
+          
+      - name: Set PoB Version only numbers
+        run: |
+          echo POB_TAG=$(echo ${${{ steps.last_release.outputs.tag_name }}:1}) >> $GITHUB_ENV
 
       - name: "Print result"
         run: |
@@ -43,6 +47,7 @@ jobs:
           echo "body: ${{ steps.last_release.outputs.body }}"
           echo "draft: ${{ steps.last_release.outputs.draft }}"
           echo "prerelease: ${{ steps.last_release.outputs.prerelease }}"
+          echo "pobtag: ${{ POB_TAG }}"
 
       # Add PoB
       - name: Add PoB files
@@ -51,6 +56,7 @@ jobs:
           repository: "PathOfBuildingCommunity/PathOfBuilding"
           latest: true
           zipBall: true
+          fileName: ""
           
       - name: PoB unzip
         run: |
