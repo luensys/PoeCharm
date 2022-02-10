@@ -57,4 +57,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "PoeCharm_v${{ steps.date.outputs.date }}.zip"
+          tag: "v${{ steps.date.outputs.date }}"
           token: ${{ secrets.GITHUB_TOKEN }}
