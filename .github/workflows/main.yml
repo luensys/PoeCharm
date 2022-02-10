@@ -37,11 +37,6 @@ jobs:
           latest: true
           zipBall: true
           
-      - name: Get PoB Latest Release file name
-        id: pob
-        with:
-          repository: "PathOfBuildingCommunity/PathOfBuilding"
-          
       - name: PoB unzip
         run: unzip PathOfBuildingCommunity*.zip -d ./PathOfBuildingCommunity
         
