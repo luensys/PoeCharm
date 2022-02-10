@@ -31,16 +31,16 @@ jobs:
       
       - name: Get PoB Release information
         id: last_release
-        uses: InsonusK/get-latest-release@v1.0.1
+        uses: thebritican/fetch-latest-release@v1
         with:
-          myToken: ${{ secrets.GITHUB_TOKEN }}
+          repo_path: "PathOfBuildingCommunity/PathOfBuilding"
 
       - name: "Print result"
         run: |
-          echo "id: ${{ steps.last_release.outputs.id }}"
-          echo "name: ${{ steps.last_release.outputs.name }}"
+          echo "url: ${{ steps.last_release.outputs.url }}"
+          echo "assets_url: ${{ steps.last_release.outputs.assets_url }}"
           echo "tag_name: ${{ steps.last_release.outputs.tag_name }}"
-          echo "created_at: ${{ steps.last_release.outputs.created_atd }}"
+          echo "body: ${{ steps.last_release.outputs.body }}"
           echo "draft: ${{ steps.last_release.outputs.draft }}"
           echo "prerelease: ${{ steps.last_release.outputs.prerelease }}"
 
