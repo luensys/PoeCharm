@@ -37,7 +37,8 @@ jobs:
           
       - name: Set PoB Version only numbers
         run: |
-          echo POB_TAG=$(echo ${${{ steps.last_release.outputs.tag_name }}:1}) >> $GITHUB_ENV
+          str=${{ steps.last_release.outputs.tag_name }}
+          echo POB_TAG=$(echo ${str:1}) >> $GITHUB_ENV
 
       - name: "Print result"
         run: |
