@@ -46,7 +46,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'PoeCharm_v${{ steps.date.outputs.date }}.zip'
-          exclusions: '*.git* PathOfBuildingCommunity*.zip'
+          exclusions: '*.git* PathOfBuilding*.zip'
           
       - name: Check files
         run: |
