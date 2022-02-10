@@ -43,7 +43,7 @@ jobs:
           ls -al ./PathOfBuildingCommunity
           
       - name: PoB unzip
-        run: unzip PathOfBuildingCommunity*.zip -d ./PathOfBuildingCommunity
+        run: unzip PathOfBuilding*.zip -d ./PathOfBuildingCommunity
         
       - name: Archive Release
         uses: thedoctor0/zip-release@master
