@@ -32,6 +32,14 @@ jobs:
           repository: "PathOfBuildingCommunity/PathOfBuilding"
           latest: true
           zipBall: true
+          
+      - name: Get PoB Latest Release file name
+        id: pob
+        with:
+          repository: "PathOfBuildingCommunity/PathOfBuilding"
+          
+      - name: PoB unzip
+        run: unzip PathOfBuildingCommunity*.zip -d ./PathOfBuildingCommunity
         
       - name: Archive Release
         uses: thedoctor0/zip-release@master
@@ -41,4 +49,6 @@ jobs:
           exclusions: '*.git*'
           
       - name: Check files
-        run: ls -al
+        run: |
+          ls -al
+          ls -al ./PathOfBuildingCommunity
