@@ -45,9 +45,9 @@ jobs:
         run: |
           ls -al
           dirs=(PathOfBuilding*/)
-          echo "${dirs[0]}"
-          echo "${dirs[1]}"
-          echo "${dirs[2]}"
+          echo "0 is ${dirs[0]}\n\r"
+          echo "1 is ${dirs[1]}\n\r"
+          echo "2 is ${dirs[2]}\n\r"
         
       - name: Archive Release
         uses: thedoctor0/zip-release@master
@@ -55,11 +55,6 @@ jobs:
           type: 'zip'
           filename: 'PoeCharm_v${{ steps.date.outputs.date }}.zip'
           exclusions: '*.git* PathOfBuilding*.zip'
-          
-      - name: Check files
-        run: |
-          ls -al
-          ls -al ./PathOfBuildingCommunity
           
       - name: zip file release
         uses: ncipollo/release-action@v1
