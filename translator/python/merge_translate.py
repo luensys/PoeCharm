@@ -2,7 +2,7 @@ import csv
 
 translated = {}
 with open('../translated.csv') as csvfile:
-  read_csv = csv.reader(csvfile, delimiter='	')
+  read_csv = csv.reader(csvfile, delimiter='	', quotechar='"', quoting=csv.QUOTE_ALL)
   for row in read_csv:
     translated[row[0]] = row[1]
 
@@ -18,15 +18,13 @@ for key, val in tr_kr.items():
       tr_kr[key] = translated[key]
       diff.append([key, val, translated[key]])
 
-for line in diff:
-  print(line)
-
 with open('../merged.csv', 'w') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter='	', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    spamwriter = csv.writer(csvfile, delimiter='	')
     for line in tr_kr:
       spamwriter.writerow(line)
 
-# with open('../diff_translate_kr.csv', 'w') as csvfile:
-#     spamwriter = csv.writer(csvfile, delimiter='	', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-#     for line in diff:
-#       spamwriter.writerow(['\"'+line[0]+'\"', '\"'+line[1]+'\"', '\"'+line[2]+'\"'])
+with open('../diff_translate_kr.csv', 'w') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for line in diff:
+      print(line)
+      spamwriter.writerow(line)
