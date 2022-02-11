@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 import csv
 
 # 
@@ -9,7 +10,7 @@ for line in rdr:
 f.close()
 
 # 
-f = open('../translate____.tsv', 'r')
+f = open('../Pob__.csv', 'r', encoding='utf8')
 rdr = csv.reader(f, delimiter='	')
 tr_kr = []
 
@@ -19,7 +20,7 @@ f.close()
 
 # 
 for idx, line in enumerate(tr_kr):
-  if(line[0] == line[1]):
+  if(tr_kr[idx][0] == tr_kr[idx][0]):
     del tr_kr[idx]
 
 with open('../translate_kr_.csv', 'w') as csvfile:
