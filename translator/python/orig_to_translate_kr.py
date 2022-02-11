@@ -2,14 +2,6 @@
 import csv
 
 # 
-f = open('../../PoeCharm/Pob/translate_cn.csv', 'r')
-rdr = csv.reader(f)
-tr_cn = []
-for line in rdr:
-  tr_cn.append(line)
-f.close()
-
-# 
 f = open('../Pob__.csv', 'r', encoding='utf8')
 rdr = csv.reader(f, delimiter='	')
 tr_kr = []
@@ -17,11 +9,6 @@ tr_kr = []
 for line in rdr:
   tr_kr.append(line)
 f.close()
-
-# 
-for idx, line in enumerate(tr_kr):
-  if(tr_kr[idx][0] == tr_kr[idx][1]):
-    del tr_kr[idx]
 
 with open('../translate_kr_.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
