@@ -11,24 +11,34 @@
 ## csv 각 파일명
 
 - cn 또는 tw 원본 : PoeCharm/Pob
-- 한국어 원본 : PoeCharm/Pob/translate_kr.csv
+- 한글 원본 : PoeCharm/Pob/translate_kr.csv
 - 구글 스프레드시트의 번역 완료 시트 csv 파일 : translator/translated.csv
 - 구글 스프레드시트의 번역 필요 시트 csv 파일 : translator/non_translated.csv
+- 작업 1-1 결과 파일 : translator/merged.csv
+- 작업 1-1 결과 파일 : translator/diff_translate_kr.csv
+- 작업 2-1 결과 파일 : translator/merged_kr.csv
+- 작업 3-1-1 결과 파일 : translator/translate_kr.csv
+- 작업 3-1-2 결과 파일 : translator/completed_translate.csv
+- 작업 3-2-1 결과 파일 : translator/need_translate.csv
 
 ## 작업 방법
 
-1. 구글 스프레드시트의 번역 완료 시트 csv 파일과 한국어 원본 파일을 merge
+1. 구글 스프레드시트의 번역 완료 시트 csv 파일과 한글 원본 파일을 merge
    1. 새로운 구글 스프레드시트의 csv 파일과 기존 csv의 다를 부분을 비교해 새로운 번역으로 대체
-   2. 결과는 translator/merged.csv
+   2. 다른 번역을 따로 정리해서 저장
 2. 구글 스프레드시트의 번역 필요 시트 csv 파일과 1번의 파일을 merge
    1. 합쳐진 결과는 translator/merged_kr.csv
 3. 원본 csv 파일과 merge 완료된 파일을 비교하여 정리
    1. 원본 csv 파일에는 없지만 merge 완료된 파일에는 있는 것은 삭제 (이제 필요 없는 번역이므로)
-      1. 이렇게 완료된 파일의 결과는 translator/translate_kr.csv로 완성
-      2. 구글 스프레드시트 업로드용으로 쓰기 위해 Delimiter를 tab으로 한 csv 생성 결과는 translator/completed_translate.csv
+      1. 이렇게 완료된 파일의 결과는 실제 적용을 위한 파일로 생성, text를 따옴표(")로 묶음
+      2. 구글 스프레드시트 업로드용으로 쓰기 위해 Delimiter를 tab으로 한 csv 생성
    2. 원본 csv 파일에는 있지만 merge 완료된 파일에는 없는 것은 번역 필요 시트에 업데이트할 파일 생성
       1. 이렇게 완료된 파일의 결과는 translator/need_translate.csv
       2. delimiter는 tab으로 해야 함
+4. 위 결과 파일인 translate_kr.csv는 한글 원본 위치에 적용
+5. 번역이 달랐던 것도 한글 원본 위치와 동일 폴더이 추가
+   1. 번역이 어떻게 달라졌는지 결과 제공을 위해서
+6. 구글 스프레드시트 업로드용 파일들은 구글 스프레드시트에 업데이트
 
 # 아래는 기존 프로젝트에 있던 글을 그대로 남겼습니다.
 

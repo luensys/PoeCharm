@@ -23,10 +23,9 @@ for idx, line in enumerate(tr_kr):
     del tr_kr[idx]
 
 with open('test.csv', 'w') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=',',
-                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
     for line in tr_kr:
-      spamwriter.writerow(['\"'+line[0]+'\"', '\"'+line[1]+'\"'])
+      spamwriter.writerow(line)
 
 count = 0
 for line in tr_kr:
