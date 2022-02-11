@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,22 +25,22 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y%m%d')"
-        
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       - name: Get PoB Release information
         id: last_release
         uses: thebritican/fetch-latest-release@v2.0.0
         with:
-          repo_path: "PathOfBuildingCommunity/PathOfBuilding"
-          
+          repo_path: 'PathOfBuildingCommunity/PathOfBuilding'
+
       - name: Set PoB Version only numbers
         run: |
           str=${{ steps.last_release.outputs.tag_name }}
           echo POB_TAG=$(echo ${str:1}) >> $GITHUB_ENV
 
-      - name: "Print result"
+      - name: 'Print result'
         run: |
           echo "url: ${{ steps.last_release.outputs.url }}"
           echo "assets_url: ${{ steps.last_release.outputs.assets_url }}"
@@ -54,24 +54,24 @@ jobs:
       - name: Add PoB files
         uses: robinraju/release-downloader@v1.3
         with:
-          repository: "PathOfBuildingCommunity/PathOfBuilding"
+          repository: 'PathOfBuildingCommunity/PathOfBuilding'
           latest: true
-          fileName: "PathOfBuildingCommunity-Portable-${{ env.POB_TAG }}.zip"
-          
+          fileName: 'PathOfBuildingCommunity-Portable-${{ env.POB_TAG }}.zip'
+
       - name: PoB unzip
         run: |
           unzip PathOfBuildingCommunity*.zip -d ./PathOfBuildingCommunity
-          
+
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
           type: 'zip'
           filename: 'PoeCharm_korean_v${{ steps.date.outputs.date }}.zip'
-          exclusions: '*.git* PathOfBuilding*.zip'
-          
+          exclusions: '*.git* PathOfBuilding*.zip translator/'
+
       - name: zip file release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "PoeCharm_korean_v${{ steps.date.outputs.date }}.zip"
-          tag: "v${{ steps.date.outputs.date }}"
+          artifacts: 'PoeCharm_korean_v${{ steps.date.outputs.date }}.zip'
+          tag: 'v${{ steps.date.outputs.date }}'
           token: ${{ secrets.GITHUB_TOKEN }}
