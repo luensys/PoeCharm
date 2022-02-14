@@ -31,17 +31,22 @@ for f in kr_list:
     read_csv = csv.reader(csvfile)
     for row in read_csv:
       if(row[0].strip().upper() != row[1].strip().upper()):
-        tr_kr[row[0].strip()] = row[1]
-        tr_kr_key[row[0].strip().upper()] = row[0]
-        if row[0].strip().upper() in etc_kr_key:
+        if row[0].strip().upper() in tr_kr_key:
           continue
         else:
+          tr_kr[row[0].strip()] = row[1]
+          tr_kr_key[row[0].strip().upper()] = row[0]
           etc_kr_key[row[0].strip().upper()] = row[0]
           etc_kr[row[0].strip()] = row[1]
   
 with open('../etcs_start.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in etc_kr.items():
+      spamwriter.writerow([key, val])
+  
+with open('../tr_start.csv', 'w') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in tr_kr.items():
       spamwriter.writerow([key, val])
 
 # compare with cn csv list
