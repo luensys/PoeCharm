@@ -23,6 +23,7 @@ with open(tr_kr_orig, 'r', encoding='utf8') as csvfile:
 for f in f_list:
   new_kr = {}
   need_kr = {}
+  check = {}
   tr_cn = {}
   tr_cn_key = {}
   with open((path_dir + '/' + f), 'r', encoding='utf8') as csvfile:
@@ -37,6 +38,9 @@ for f in f_list:
         if(tr_kr_key[key].strip().upper() != tr_kr[tr_kr_key[key].strip()].strip().upper()):
           new_kr[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
           del etc_kr[tr_kr_key[key].strip()]
+        else:
+          need_kr[tr_cn_key[key]] = ''
+          check[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
     except KeyError:
       need_kr[tr_cn_key[key]] = ''
       pass
@@ -59,5 +63,10 @@ with open(result_dir + '/no_tr.csv', 'w') as csvfile:
 with open('../need.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in need_kr.items():
+      spamwriter.writerow([key, val])
+  
+with open('../check.csv', 'w') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter='	')
+    for key, val in check.items():
       spamwriter.writerow([key, val])
 
