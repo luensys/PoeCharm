@@ -8929,7 +8929,7 @@
 "Adds {0} to {1} Physical Damage if you've dealt a Critical Strike Recently","최근 4초 이내 치명타 명중 시 물리 피해 {0}~{1} 추가"
 "{0}% increased Movement Speed per Summoned Totem","소환된 토템 하나당 이동 속도 {0}% 증가"
 "Inflict non-Damaging Ailments as though dealing {0}% more Damage","비-피해 상태 이상 효과를 {0}% 증폭된 피해를 준 것처럼 부여"
-"You have Tailwind if you have dealt a Critical Strike Recently","""최근 4초 이내 치명타 공격 시 순풍 획득"
+"You have Tailwind if you have dealt a Critical Strike Recently","최근 4초 이내 치명타 공격 시 순풍 획득"
 "Totems' Action Speed cannot be modified to below base value","토템의 동작 속도가 기본 수치 밑으로 내려가지 않음"
 "Each Totem applies {0}% increased Damage taken to Enemies near it","토템 하나당 주변에 있는 적이 받는 피해 {0}% 증가"
 "You are Unaffected by Bleeding while Leeching","흡수의 영향을 받는 동안 출혈의 영향을 받지 않음"

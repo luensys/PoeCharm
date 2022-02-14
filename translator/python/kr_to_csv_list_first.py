@@ -51,6 +51,11 @@ with open(result_dir + '/etcs.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in etc_kr.items():
       spamwriter.writerow([key, val])
+
+with open(result_dir + '/no_tr.csv', 'w') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in etc_kr.items():
+      spamwriter.writerow([key, key])
   
 with open('../need.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
