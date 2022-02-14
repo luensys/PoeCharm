@@ -34,10 +34,9 @@ for f in f_list:
   for key, val in tr_cn_key.items():
     try:
       if(tr_cn_key[key].strip().upper() == tr_kr_key[key].strip().upper()):
-        if(tr_cn_key[key].strip().upper() == 'GUARDIAN'):
-          print(tr_cn_key[key].strip().upper())
-        new_kr[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
-        del etc_kr[tr_kr_key[key].strip()]
+        if(tr_kr_key[key].strip().upper() != tr_kr[tr_kr_key[key].strip()].strip().upper()):
+          new_kr[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
+          del etc_kr[tr_kr_key[key].strip()]
     except KeyError:
       need_kr[tr_cn_key[key]] = ''
       pass

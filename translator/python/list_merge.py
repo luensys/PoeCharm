@@ -43,13 +43,11 @@ for f in cn_list:
   for key, val in tr_cn_key.items():
     try:
       if(tr_cn_key[key].strip().upper() == tr_kr_key[key].strip().upper()):
-        if(tr_cn_key[key].strip().upper() == 'GUARDIAN'):
-          print(tr_cn_key[key].strip().upper())
         new_kr[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
         del etc_kr[tr_kr_key[key].strip()]
     except KeyError:
       need_kr[tr_cn_key[key]] = ''
-      pass
+      new_kr[tr_cn_key[key]] = tr_cn_key[key].strip()
 
   with open(result_dir + '/' + f, 'w') as csvfile:
       spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
