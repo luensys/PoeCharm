@@ -67,7 +67,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'PoeCharm_korean_v${{ steps.date.outputs.date }}.zip'
-          exclusions: '*.git* PathOfBuilding*.zip /*translator/*'
+          exclusions: '*.git* PathOfBuilding*.zip /*translator/* /*api/*'
 
       - name: zip file release
         uses: ncipollo/release-action@v1
