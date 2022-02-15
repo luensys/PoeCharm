@@ -20,6 +20,7 @@ tr_kr = {}
 etc_kr = {}
 need_kr = {}
 check = {}
+completed = {}
 tr_kr_key = {}
 etc_kr_key = {}
 for f in kr_list:
@@ -65,6 +66,7 @@ for f in cn_list:
       if(tr_cn_key[key].strip().upper() == tr_kr_key[key].strip().upper()):
         del etc_kr[tr_kr_key[key].strip()]
         new_kr[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
+        completed[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
         if(tr_kr_key[key].strip().upper() == tr_kr[tr_kr_key[key].strip()].strip().upper()):
           need_kr[tr_cn_key[key]] = ''
           check[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
@@ -81,12 +83,26 @@ with open(result_dir + '/etcs.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in etc_kr.items():
       spamwriter.writerow([key, val])
-  
+
+# speadsheet에 번역 완료로 올리기 위한 포맷으로 저장
+with open('../completed.csv', 'w') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter='	')
+    for key, val in completed.items():
+      spamwriter.writerow([key, val])
+
+# speadsheet에 사용되지 않음으로 올리기 위한 포맷으로 저장
+with open('../non_use.csv', 'w') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter='	')
+    for key, val in etc_kr.items():
+      spamwriter.writerow([key, val])
+
+# 번역이 필요한 데이타 저장
 with open('../need.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in need_kr.items():
       spamwriter.writerow([key, val])
   
+# 혹시 실수 한 것이 있을 수 있으므로 체크할 것에 대한 정보 저장
 with open('../check.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in check.items():
