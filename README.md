@@ -28,6 +28,11 @@ https://docs.google.com/spreadsheets/d/1RCvj6xdP8Np2B1ksoYNn59WNYjdJeQaF9edUSIIK
 4. 3번 작업을 하면서 번역 완료 된 파일, 번역이 필요한 파일, 번역이 있지만 사용되지 않은 파일로 정리
 5. 정리된 파일을 다시 구글 스프레드시트에 적용
 
+# 작업에 필요한 정보
+
+- search query 추출
+  - https://poe-query.vercel.app/
+
 # 아래는 기존 프로젝트에 있던 글을 그대로 남겼습니다.
 
 ---
