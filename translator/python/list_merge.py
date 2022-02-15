@@ -97,7 +97,7 @@ with open('../non_use.csv', 'w') as csvfile:
       spamwriter.writerow([key, val])
 
 # 번역이 필요한 데이타 저장
-with open('../need.csv', 'w') as csvfile:
+with open('../need_translate.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in need_kr.items():
       spamwriter.writerow([key, val])
