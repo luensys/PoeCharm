@@ -24,7 +24,7 @@ def reshape(lst, n):
 
 # query = {"query":{"status":{"option":"online"},"type":"루비 플라스크","stats":[{"type":"and","filters":[],"disabled":False}],"filters":{"type_filters":{"filters":{"rarity":{"option":"magic"}},"disabled":False}}},"sort":{"price":"asc"}}
 query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}],"filters":{"type_filters":{"filters":{"rarity":{"option":"magic"}},"disabled":False}}},"sort":{"price":"asc"}}
-kr_types = ["루비 플라스크", "사파이어 플라스크", "토파즈 플라스크", "화강암 플라스크", "수은 플라스크", "자수정 플라스크", "석영 플라스크", "비취 플라스크"]
+kr_types = ["신성한 마나 플라스크", "영원의 마나 플라스크", "신성한 생명력 플라스크", "영원의 생명력 플라스크", "다이아몬드 플라스크", "현무암 플라스크", "아쿠아마린 플라스크", "휘안석 플라스크", "유황 플라스크", "은 플라스크", "비스무트 플라스크", "루비 플라스크", "사파이어 플라스크", "토파즈 플라스크", "화강암 플라스크", "수은 플라스크", "자수정 플라스크", "석영 플라스크", "비취 플라스크"]
 
 tags = {}
 with open(flask_file, 'r', encoding='utf8') as csvfile:
@@ -58,3 +58,4 @@ for kr_type in kr_types:
       spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
       for key, val in tags.items():
         spamwriter.writerow([key, val])
+
