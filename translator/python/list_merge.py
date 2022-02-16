@@ -11,6 +11,7 @@ result_dir = '../translate_kr'
 tr_kr_orig = 'translate_kr.csv'
 mac_file = '.DS_Store'
 tr_kr_dir = '../../PoeCharm/Pob/translate_kr'
+temp_file = 'Uniques.txt.csv'
 
 if(os.path.isdir(result_dir) != True):
   os.makedirs(result_dir)
@@ -23,6 +24,7 @@ check = {}
 completed = {}
 tr_kr_key = {}
 etc_kr_key = {}
+temp = {}
 for f in kr_list:
   with open((kr_dir + '/' + f), 'r', encoding='utf8') as csvfile:
     if(f == tr_kr_orig):
@@ -70,9 +72,13 @@ for f in cn_list:
         if(tr_kr_key[key].strip().upper() == tr_kr[tr_kr_key[key].strip()].strip().upper()):
           need_kr[tr_cn_key[key]] = ''
           check[tr_cn_key[key]] = tr_kr[tr_kr_key[key].strip()]
+          if(f == temp_file):
+            temp[tr_cn_key[key]] = ''
     except KeyError:
       need_kr[tr_cn_key[key]] = ''
       new_kr[tr_cn_key[key]] = tr_cn_key[key].strip()
+      if(f == temp_file):
+        temp[tr_cn_key[key]] = ''
 
   with open(result_dir + '/' + f, 'w') as csvfile:
       spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
@@ -108,3 +114,9 @@ with open('../check.csv', 'w') as csvfile:
     for key, val in check.items():
       spamwriter.writerow([key, val])
 
+
+# 특정 파일 타겟으로 필요한 번역 정리
+with open('../temp.csv', 'w') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter='	')
+    for key, val in temp.items():
+      spamwriter.writerow([key, val])
