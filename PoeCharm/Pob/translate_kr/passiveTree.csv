@@ -2,7 +2,7 @@
 "(Shock increases Damage taken by up to 50%, depending on the amount of Lightning Damage in the hit, for 2 seconds)","(""감전""이 받는 피해를 2초 동안 50%까지 증가시팁니다. 증가 정도는 감전을 부여한 번개 피해량에 따라 달라집니다)"
 "(Recently refers to the past 4 seconds)","(""최근""은 지난 4초 동안을 의미합니다.)"
 "(You can only take one of the three Templar Ascendancy passives)","(세 개의 템플러 전직 직업 중 하나만 선택할 수 있습니다)"
-"(Arcane Surge grants 10% more Spell Damage, 10% increased Cast Speed, and 0.5% of maximum Mana Regenerated per second, for 4 seconds)","(Arcane Surge grants 10% more Spell Damage, 10% increased Cast Speed, and 0.5% of maximum Mana Regenerated per second, for 4 seconds)"
+"(Arcane Surge grants 10% more Spell Damage, 10% increased Cast Speed, and 0.5% of maximum Mana Regenerated per second, for 4 seconds)","(비전 쇄도가 주문 피해 10% 증폭 효과 부여, 10% increased Cast Speed, and 0.5% of maximum Mana Regenerated per second, for 4 seconds)"
 "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)","(""중독""은 지속 카오스 피해를 가하며, 피해량은 해당 스킬의 기본 물리 및 카오스 피해에 의해 결정됩니다. 중독은 다회 적용될 시에 중첩됩니다.)"
 "(Ignoring Resistances means your Damage cannot be modified in any way by any Resistance stats)","(저항 무시는 상대가 어떤 저항을 지니고 있든 여러분에게 받는 피해량이 변하지 않음을 의미합니다)"
 "(You can only take one of the three Ranger Ascendancy passives)","(세 개의 레인저 전직 직업 중 하나만 선택할 수 있습니다)"
@@ -81,7 +81,7 @@
 "(Scorched Enemies have their Elemental Resistances lowered by up to 30%, based on the Fire Damage of the Hit, for 4 seconds)","(그슬린 적의 원소 저항은 화염 피해 명중에 따라 4 초 동안 최대 30 % 감소합니다.)"
 "(Hits have up to +15% Critical Strike Chance against Brittle Enemies, based on the Cold Damage of the Hit which inflicted Brittle, for 4 seconds)","(Hits have up to +15% Critical Strike Chance against Brittle Enemies, based on the Cold Damage of the Hit which inflicted Brittle, for 4 seconds)"
 "(Sapped Enemies deal up to 20% less Damage, based on the Lightning Damage of the Hit, for 4 seconds)","(활력 감소된 적이주는 피해가 4 초 동안 번개 피해에 적중에 따라 최대 20 % 감소합니다.)"
-"(You are Unencumbered while you have no Gloves, no Main Hand Item, and no Off Hand Item Equipped)","(You are Unencumbered while you have no Gloves, no Main Hand Item, and no Off Hand Item Equipped)"
+"(You are Unencumbered while you have no Gloves, no Main Hand Item, and no Off Hand Item Equipped)","(장갑, 주 무기 그리고 보조 장비를 장착하지 않는 동안 ""홀가분"" 상태가 됩니다)"
 "(Attributes are Strength, Dexterity, and Intelligence)","(능력치는 힘, 민첩, 지능입니다)"
 "(Cold Exposure applies -10% to Cold Resistance for 4 seconds)","(냉기 노출에 4초 간 냉기 저항 -10% 적용)"
 "(Fire Exposure applies -10% to Fire Resistance for 4 seconds)","(화염 노출은 4초 동안 화염 저항에 -10%를 적용합니다)"
@@ -169,20 +169,20 @@
 "(Each instance of Gale Force lasts 4 seconds. Maximum 10 Gale Force)","(각 강풍의 힘은 4초간 유지됩니다. 최대 10 강풍의 힘)"
 "(Projectile Attack Hits deal 20% less Damage to targets at the start of their movement, dealing up to 60% more Damage to targets as the projectile travels farther)","(투사체 공격 적중은 이동 시작 시 대상에게 주는 피해가 20 % 감소하고, 발사체가 멀리 이동할 때 대상에게 최대 60 % 더 많은 피해를 줍니다.)"
 "(These are consecutive)
-(Each Conflux means all damage causes that Ailment)","(These are consecutive)
-(Each Conflux means all damage causes that Ailment)"
+(Each Conflux means all damage causes that Ailment)","(지속 효과)
+(각 원소 융합은 상태 이상을 부여하는 모든 종류의 피해를 의미합니다)"
 "(Inherent effects from having Rage are:
 1% increased Attack Damage per 1 Rage
 1% increased Attack Speed per 2 Rage
-1% increased Movement Speed per 5 Rage)","(Inherent effects from having Rage are:
-1% increased Attack Damage per 1 Rage
-1% increased Attack Speed per 2 Rage
-1% increased Movement Speed per 5 Rage)"
+1% increased Movement Speed per 5 Rage)","(""격노""로 인해 생기는 효과는 다음과 같습니다.
+격노 1마다 공격 피해 1% 증가
+격노 2마다 공격 속도 1% 증가
+격노 5마다 이동 속도 1% 증가)"
 "(Fortify grants 20% less Damage Taken from Hits, for 4 seconds)","(""방어 상승""은 4초 동안 피격으로 받는 피해를 20% 감폭합니다.)"
-"(Enemies standing in Smoke Clouds are Blinded)","(Enemies standing in Smoke Clouds are Blinded)"
+"(Enemies standing in Smoke Clouds are Blinded)","(""연막"" 속에 있는 적은 실명 상태가 됩니다)"
 "(Allies on your Consecrated Ground Regenerate a percentage of their Maximum Life per second)","(""신성화 지대""에서는 동료의 생명력이 1초당 최대 생명력의 정해진 비율만큼 차오릅니다.)"
 "(Arcane Surge grants 10% more Spell Damage and 30% increased Mana Regeneration rate, for 4 seconds)","(비전 쇄도는 주문 피해 10% 증폭과  초당 마나 재생 30% 증가, 4초 동안 유지됩니다.)"
-"(Crushed lowers Physical Damage Reduction by 15%)","(Crushed lowers Physical Damage Reduction by 15%)"
-"(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)","(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)"
-"(Take 1% less Damage from Hits per Fortification. Maximum 20 Fortification. Fortification lasts 5 seconds)","(Take 1% less Damage from Hits per Fortification. Maximum 20 Fortification. Fortification lasts 5 seconds)"
-"(Allies on your Consecrated Ground Regenerate a percentage of their Maximum Life per second, and Curses have 50% reduced effect on them)","(Allies on your Consecrated Ground Regenerate a percentage of their Maximum Life per second, and Curses have 50% reduced effect on them)"
+"(Crushed lowers Physical Damage Reduction by 15%)","(타쇄당함이 물리 피해 감소를 15% 낮춤)"
+"(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)","(실명은 4초 동안 정확도와 회피를 20% 감폭시킵니다.)"
+"(Take 1% less Damage from Hits per Fortification. Maximum 20 Fortification. Fortification lasts 5 seconds)","(피격 시 받는 피해가 방어 상승 1당 1% 감폭됩니다. 방어 상승은 최대 20까지 중첩되며 5초 지속됩니다.)"
+"(Allies on your Consecrated Ground Regenerate a percentage of their Maximum Life per second, and Curses have 50% reduced effect on them)","(""신성화 지대""에서는 동료의 생명력이 1초당 최대 생명력의 정해진 비율만큼 차오르며, 동료에게 적용되는 저주의 효과가 50% 감소합니다)"
