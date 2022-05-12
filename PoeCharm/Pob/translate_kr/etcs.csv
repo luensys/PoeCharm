@@ -1,3 +1,4 @@
+"Exerted Attacks deal 50% more Damage if a Warcry Sacrificed Rage Recently","최근 4초 이내 함성으로 격노를 소모한 경우 전력 공격이 주는 피해 50% 증폭"
 "# of Rampage Kills:","광란의 적 처치 횟수:"
 "Ailment calculation mode:","질병 계산 방법:"
 "Are you Blinded?","실명 되었나?"
@@ -173,7 +174,6 @@
 "Weapon Range","사정 거리"
 "Sockets","소켓"
 "Chance to Block","막기 확률"
-"Exerted Attacks deal 50% more Damage if a Warcry Sacrificed Rage Recently","최근 4초 이내 함성으로 격노를 소모한 경우 전력 공격이 주는 피해 50% 증폭"
 "Grants 1 Passive Skill Point","패시브 스킬 포인트 1 포인트 제공"
 "Grants 2 Passive Skill Points","패시브 스킬 포인트 2 포인트 제공"
 "You take 65% of Damage from Blocked Hits","막아낼 시 65%의 피해를 받음"
