@@ -42,21 +42,32 @@ with open(orig_tr_dir + '/' + stat_description_file, 'r', encoding='utf8') as cs
 
 # gem_list = {"Animate Weapon": "무기 기동"}
 
-count = 1
+count = 0
 for en_type, kr_type in gem_list.items():
+  # 마지막에 놓을 경우 continue 될 때 카운트가 올라가지 않아 제일 앞으로 옮김
+  count = count + 1
   # 너무 많으면 오래 걸려서 끊어서 진행하려고 skip 관련 부분 추가
-  if count > 100:
-    count = count + 1
+  if count < 400:
     continue
   print(kr_type)
+
+  # 마지막에 놓을 경우 연속으로 continue 되는 상황 발생 시 api 서버에서 ban 당해 앞으로 옮김
+  time.sleep(15)
+  
   query = query_base.copy()
   query['query']['type'] = kr_type
   response = requests.post(URL + search_uri, json=query, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
   result = json.loads(response.text)
+  if not 'result' in result:
+    print('is not response for sale')
+    continue
   items = result['result']
 
   fetchs = reshape(items, 1)
 
+  if len(fetchs) < 1:
+    print('is not for sale')
+    continue
   fetch = fetchs[0]
   en_info = get_request(EN_URL + fetch_uri + ','.join(fetch))
   kr_info = get_request(URL + fetch_uri + ','.join(fetch))
@@ -78,9 +89,6 @@ for en_type, kr_type in gem_list.items():
           desc_list[key] = kr_txt
   else:
     print('item not exists')
-
-  time.sleep(15)
-  count = count + 1
 
 # 젬 정보 수정된 것 저장
 with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
