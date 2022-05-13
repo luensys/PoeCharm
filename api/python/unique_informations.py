@@ -25,6 +25,7 @@ def post_request(url, json_data):
 def reshape(lst, n):
     return [lst[i*n:(i+1)*n] for i in range(len(lst)//n)]
 
+# https://poe-query.vercel.app/ 참조
 query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}]},"sort":{"price":"asc"}}
 
 unique_list = {}

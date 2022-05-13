@@ -25,6 +25,7 @@ def post_request(url, json_data):
 def reshape(lst, n):
     return [lst[i*n:(i+1)*n] for i in range(len(lst)//n)]
 
+# https://poe-query.vercel.app/ 참조
 query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}]},"sort":{"price":"asc"}}
 
 
@@ -53,7 +54,7 @@ for en_type, kr_type in gem_list.items():
 
   # 마지막에 놓을 경우 연속으로 continue 되는 상황 발생 시 api 서버에서 ban 당해 앞으로 옮김
   time.sleep(15)
-  
+
   query = query_base.copy()
   query['query']['type'] = kr_type
   response = requests.post(URL + search_uri, json=query, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
