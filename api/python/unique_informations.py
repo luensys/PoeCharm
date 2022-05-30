@@ -47,7 +47,7 @@ for en_type, kr_type in unique_list.items():
   # 마지막에 놓을 경우 continue 될 때 카운트가 올라가지 않아 제일 앞으로 옮김
   count = count + 1
   # 너무 많으면 오래 걸려서 끊어서 진행하려고 skip 관련 부분 추가
-  if count > 100:
+  if count < 800:
     continue
   print(kr_type)
 
@@ -97,15 +97,6 @@ for en_type, kr_type in unique_list.items():
         kr_txt = re.sub(r'([0-9\+]+[.,]*)+', '{0}', kr_info['result'][0]['item']['explicitMods'][idx])
         # print(en_txt)
         # print(kr_txt)
-        
-        for key, val in desc_list.items():
-          if(key.strip() == en_txt.strip()):
-            desc_list[key] = kr_txt
-
-    if 'flavourText' in en_info['result'][0]['item']:
-      for idx in range(len(kr_info['result'][0]['item']['flavourText'])):
-        en_txt = re.sub(r'([0-9]+[.,]*)+', '{0}', en_info['result'][0]['item']['flavourText'][idx])
-        kr_txt = re.sub(r'([0-9]+[.,]*)+', '{0}', kr_info['result'][0]['item']['flavourText'][idx])
         
         for key, val in desc_list.items():
           if(key.strip() == en_txt.strip()):
