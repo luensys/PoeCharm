@@ -33,13 +33,10 @@ for f in poecharm_tr_list:
     read_csv = csv.reader(csvfile, delimiter='\t')
     for row in read_csv:
       if(row[0].strip().upper() != row[1].strip().upper()):
-        if row[0].strip().upper() in tr_kr_key:
-          continue
-        else:
-          tr_kr[row[0].strip()] = row[1]
-          tr_kr_key[row[0].strip().upper()] = row[0]
-          etc_kr_key[row[0].strip().upper()] = row[0]
-          etc_kr[row[0].strip()] = row[1]
+        tr_kr[row[0].strip()] = row[1]
+        tr_kr_key[row[0].strip().upper()] = row[0]
+        etc_kr_key[row[0].strip().upper()] = row[0]
+        etc_kr[row[0].strip()] = row[1]
 
 # compare with kr csv list
 for f in kr_list:
