@@ -3,6 +3,7 @@ import json
 import time
 import csv
 import re
+import more_itertools as mit
 
 URL = 'https://poe.game.daum.net/api/trade'
 EN_URL = 'https://www.pathofexile.com/api/trade'
@@ -23,7 +24,11 @@ def post_request(url, json_data):
   return json.loads(res.text)
 
 def reshape(lst, n):
-    return [lst[i*n:(i+1)*n] for i in range(len(lst)//n)]
+  return [lst[i*n:(i+1)*n] for i in range(len(lst)//n)]
+
+def repl(m):
+  return next(repl.v)
+repl.v=mit.seekable(('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}'))
 
 # https://poe-query.vercel.app/ 참조
 query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}]},"sort":{"price":"asc"}}
@@ -47,9 +52,9 @@ for en_type, kr_type in unique_list.items():
   # 마지막에 놓을 경우 continue 될 때 카운트가 올라가지 않아 제일 앞으로 옮김
   count = count + 1
   # 너무 많으면 오래 걸려서 끊어서 진행하려고 skip 관련 부분 추가
-  if count < 800:
-    continue
-  print(kr_type)
+  # if count > 20:
+  #   continue
+  print(count, kr_type)
 
   # 마지막에 놓을 경우 연속으로 continue 되는 상황 발생 시 api 서버에서 ban 당해 앞으로 옮김
   time.sleep(15)
@@ -84,8 +89,10 @@ for en_type, kr_type in unique_list.items():
   if 'result' in kr_info and 'item' in en_info['result'][0]:
     if 'implicitMods' in en_info['result'][0]['item']:
       for idx in range(len(kr_info['result'][0]['item']['implicitMods'])):
-        en_txt = re.sub(r'([0-9]+[.,+]*)+', '{0}', en_info['result'][0]['item']['implicitMods'][idx])
-        kr_txt = re.sub(r'([0-9]+[.,+]*)+', '{0}', kr_info['result'][0]['item']['implicitMods'][idx])
+        en_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, en_info['result'][0]['item']['implicitMods'][idx])
+        repl.v.seek(0)
+        kr_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, kr_info['result'][0]['item']['implicitMods'][idx])
+        repl.v.seek(0)
 
         for key, val in desc_list.items():
           if(key.strip() == en_txt.strip()):
@@ -93,8 +100,10 @@ for en_type, kr_type in unique_list.items():
 
     if 'explicitMods' in en_info['result'][0]['item']:
       for idx in range(len(kr_info['result'][0]['item']['explicitMods'])):
-        en_txt = re.sub(r'([0-9\+]+[.,]*)+', '{0}', en_info['result'][0]['item']['explicitMods'][idx])
-        kr_txt = re.sub(r'([0-9\+]+[.,]*)+', '{0}', kr_info['result'][0]['item']['explicitMods'][idx])
+        en_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, en_info['result'][0]['item']['explicitMods'][idx])
+        repl.v.seek(0)
+        kr_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, kr_info['result'][0]['item']['explicitMods'][idx])
+        repl.v.seek(0)
         # print(en_txt)
         # print(kr_txt)
         
@@ -104,9 +113,19 @@ for en_type, kr_type in unique_list.items():
 
   else:
     print('item not exists')
+  
+  # count 수에 따라 한 번씩 저장 함
+  if ((count % 10) == 0):
+    # 유니크 정보 수정된 것 저장
+    with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+        for key, val in desc_list.items():
+          spamwriter.writerow([key, val])
+    print(count, 'file saved')
+
 
 # 유니크 정보 수정된 것 저장
-with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
-    for key, val in desc_list.items():
-      spamwriter.writerow([key, val])
+# with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
+#     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+#     for key, val in desc_list.items():
+#       spamwriter.writerow([key, val])
