@@ -153,3 +153,9 @@ with open(result_dir + '/' + passive_tree_file, 'w') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in passive_tree_list.items():
       spamwriter.writerow([key, val])
+
+# reminderText 정보 수정된 것 statDescriptions에 저장
+with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in desc_list.items():
+      spamwriter.writerow([key, val])
