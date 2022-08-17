@@ -81,29 +81,29 @@ for en_type, kr_type in unique_list.items():
   kr_info = get_request(URL + fetch_uri + ','.join(fetch))
   # print(en_info)
   # print(kr_info)
-  
-  # print(kr_info['result'][0]['item']['implicitMods'])
-  # print(kr_info['result'][0]['item']['explicitMods'])
-  # print(kr_info['result'][0]['item']['flavourText'])
-  # print(en_info['result'][0]['item']['implicitMods'])
-  # print(en_info['result'][0]['item']['explicitMods'])
-  # print(en_info['result'][0]['item']['flavourText'])
 
   if 'result' in kr_info and 'item' in en_info['result'][0]:
     if 'implicitMods' in en_info['result'][0]['item']:
+      print(en_info['result'][0]['item']['implicitMods'])
+      print(kr_info['result'][0]['item']['implicitMods'])
       for idx in range(len(kr_info['result'][0]['item']['implicitMods'])):
         en_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, en_info['result'][0]['item']['implicitMods'][idx])
         repl.v.seek(0)
         kr_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, kr_info['result'][0]['item']['implicitMods'][idx])
         repl.v.seek(0)
 
+        exists = 0
         for key, val in desc_list.items():
           if(key.strip() == en_txt.strip()):
             desc_list[key] = kr_txt
-          else:
-            etc_list[en_txt.strip()] = kr_txt
+            exists = 1
+
+        if(exists == 0) :
+          etc_list[en_txt.strip()] = kr_txt
 
     if 'explicitMods' in en_info['result'][0]['item']:
+      print(en_info['result'][0]['item']['explicitMods'])
+      print(kr_info['result'][0]['item']['explicitMods'])
       for idx in range(len(kr_info['result'][0]['item']['explicitMods'])):
         en_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, en_info['result'][0]['item']['explicitMods'][idx])
         repl.v.seek(0)
@@ -112,11 +112,14 @@ for en_type, kr_type in unique_list.items():
         # print(en_txt)
         # print(kr_txt)
         
+        exists = 0
         for key, val in desc_list.items():
           if(key.strip() == en_txt.strip()):
             desc_list[key] = kr_txt
-          else:
-            etc_list[en_txt.strip()] = kr_txt
+            exists = 1
+            
+        if(exists == 0) :
+          etc_list[en_txt.strip()] = kr_txt
 
   else:
     print('item not exists')
