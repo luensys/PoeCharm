@@ -12,67 +12,79 @@ def get_request(url):
 translate = {}
 items = {}
 uniques = {}
+accessories = {}
+armours = {}
+flasks = {}
+gems = {}
+jewels = {}
+weapons = {}
 
 kr_items = get_request(URL)
 en_items = get_request(EN_URL)
 
-count = 0
+item_ids = ['accessories', 'armour', 'flasks', 'gems', 'jewels', 'weapons']
 for idx, en_item in enumerate(en_items['result']):
   kr_item = kr_items['result'][idx]
-  for key in en_item.keys():
-    if(isinstance(en_item[key], list) == True):
-      pass
-    else:
-      if(len(en_item[key]) > 1):
-        if(key == 'id'):
-          pass
+  # PoB에 필요한 데이터만 사용
+  if en_item['id'] in item_ids:
+    for idx1, en_val1 in enumerate(en_item['entries']):
+      # idx1 : 아이템 번호, en_val1 : 영문 아이템 정보
+      try:
+        val1 = kr_item['entries'][idx1]
+        # val1 : 한글 아이템 정보
+        if 'name' in en_val1.keys():
+          uniques[en_val1['name']] = val1['name'] + '(' + en_val1['name'] + ')'
         else:
-          items[en_item[key]] = kr_item[key]
-          translate[en_item[key]] = kr_item[key]
-  if(en_item["id"] != kr_item["id"]):
-    print(en_item["id"], kr_item["id"])
-  for idx1, en_val1 in enumerate(en_item['entries']):
-    try:
-      val1 = kr_item['entries'][idx1]
-      for key2 in en_val1.keys():
-        if(isinstance(en_val1[key2], list) == True):
-          pass
-        else:
-          if(isinstance(en_val1[key2], dict) == True):
-            pass
-          else:
-            if(len(en_val1[key2]) > 1):
-              if 'flags' in en_val1:
-                if((key2 == 'name') | (key2 == 'text')):
-                  # print(en_val1[key2], val1[key2])
-                  uniques[en_val1[key2]] = val1[key2] + '(' + en_val1[key2] + ')'
-                  translate[en_val1[key2]] = val1[key2] + '(' + en_val1[key2] + ')'
-                else:
-                  items[en_val1[key2]] = val1[key2]
-                  translate[en_val1[key2]] = val1[key2]
-              else:
-                items[en_val1[key2]] = val1[key2]
-                translate[en_val1[key2]] = val1[key2]
-        if(key2 == 'flags'):
-          if(val1[key2]["unique"] != en_val1[key2]["unique"]):
-            print(val1, en_val1)
-    except IndexError:
-      print(idx1, en_val1)
-  count += 1
+          if 'flags' in en_val1.keys():
+            print(en_val1['name'])
+          if en_item['id'] == 'accessories':
+            accessories[en_val1['text']] = val1['text']
+          elif en_item['id'] == 'armour':
+            armours[en_val1['text']] = val1['text']
+          elif en_item['id'] == 'flasks':
+            flasks[en_val1['text']] = val1['text']
+          elif en_item['id'] == 'gems':
+            gems[en_val1['text']] = val1['text']
+          elif en_item['id'] == 'jewels':
+            jewels[en_val1['text']] = val1['text']
+          elif en_item['id'] == 'weapons':
+            weapons[en_val1['text']] = val1['text']
+          
+      except IndexError:
+        print(idx1, en_val1)
 
-print(count)
 
-with open('../item_from_api.csv', 'w', encoding='utf8') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
-    for key, val in translate.items():
-      spamwriter.writerow([key, val])
-
-with open('../items_from_api.csv', 'w', encoding='utf8') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
-    for key, val in items.items():
-      spamwriter.writerow([key, val])
-
-with open('../unique_from_api.csv', 'w', encoding='utf8') as csvfile:
+with open('../uniques_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in uniques.items():
+      spamwriter.writerow([key, val])
+
+with open('../armours_from_api.csv', 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in armours.items():
+      spamwriter.writerow([key, val])
+
+with open('../accessories_from_api.csv', 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in accessories.items():
+      spamwriter.writerow([key, val])
+
+with open('../flasks_from_api.csv', 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in flasks.items():
+      spamwriter.writerow([key, val])
+
+with open('../gems_from_api.csv', 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in gems.items():
+      spamwriter.writerow([key, val])
+
+with open('../jewels_from_api.csv', 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in jewels.items():
+      spamwriter.writerow([key, val])
+
+with open('../weapons_from_api.csv', 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in weapons.items():
       spamwriter.writerow([key, val])
