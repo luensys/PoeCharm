@@ -35,7 +35,7 @@ for key, val in tr_kr.items():
       tr_kr[key] = translated[key]
       diff.append([key, val, translated[key]])
 
-with open('../merged.csv', 'w') as csvfile:
+with open('../merged.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])
@@ -50,24 +50,24 @@ for key, val in tr_kr.items():
 for key, val in tr_cn.items():
   tr_cn[key] = ''
 
-with open('../diff_translate_kr.csv', 'w') as csvfile:
+with open('../diff_translate_kr.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for line in diff:
       spamwriter.writerow(line)
 
-with open('../merged_kr.csv', 'w') as csvfile:
+with open('../merged_kr.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])
 
-with open('../need_translate.csv', 'w') as csvfile:
+with open('../need_translate.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in tr_cn.items():
       spamwriter.writerow([key, val])
 
 
 
-with open('../translate_kr.csv', 'w') as csvfile:
+with open('../translate_kr.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])

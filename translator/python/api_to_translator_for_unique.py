@@ -26,7 +26,7 @@ for key, val in api_list.items():
 
 
 # name 정보 수정된 것 저장
-with open(result_dir + '/' + tr_file, 'w') as csvfile:
+with open(result_dir + '/' + tr_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in tr_list.items():
       spamwriter.writerow([key, val])

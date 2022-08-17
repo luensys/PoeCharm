@@ -92,7 +92,7 @@ for en_type, kr_type in gem_list.items():
     print('item not exists')
 
 # 젬 정보 수정된 것 저장
-with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
+with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in desc_list.items():
       spamwriter.writerow([key, val])

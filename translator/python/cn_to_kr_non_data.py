@@ -31,12 +31,12 @@ for key, val in tr_kr_key.items():
   except KeyError:
     remove_trans[tr_kr_key[key]] = tr_kr[tr_kr_key[key]]
 
-with open('../add_translate_from_cn.csv', 'w') as csvfile:
+with open('../add_translate_from_cn.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in add_trans.items():
       spamwriter.writerow([key, val])
 
-with open('../no_more_translate.csv', 'w') as csvfile:
+with open('../no_more_translate.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in remove_trans.items():
       spamwriter.writerow([key, val])

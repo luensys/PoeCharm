@@ -18,22 +18,22 @@ for key, val in tr_kr_key.items():
     non_check[tr_kr_key[key]] = ''
     del tr_kr[tr_kr_key[key]]
 
-with open('../translated.csv', 'w') as csvfile:
+with open('../translated.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])
 
-with open('../non_translated.csv', 'w') as csvfile:
+with open('../non_translated.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in non_tr.items():
       spamwriter.writerow([key, val])
 
-with open('../non_translated_check.csv', 'w') as csvfile:
+with open('../non_translated_check.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in non_check.items():
       spamwriter.writerow([key, val])
 
-with open('../translate_kr_.csv', 'w') as csvfile:
+with open('../translate_kr_.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])

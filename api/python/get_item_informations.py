@@ -62,17 +62,17 @@ for idx, en_item in enumerate(en_items['result']):
 
 print(count)
 
-with open('../item_from_api.csv', 'w') as csvfile:
+with open('../item_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in translate.items():
       spamwriter.writerow([key, val])
 
-with open('../items_from_api.csv', 'w') as csvfile:
+with open('../items_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in items.items():
       spamwriter.writerow([key, val])
 
-with open('../unique_from_api.csv', 'w') as csvfile:
+with open('../unique_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in uniques.items():
       spamwriter.writerow([key, val])

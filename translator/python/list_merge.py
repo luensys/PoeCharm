@@ -42,12 +42,12 @@ for f in kr_list:
           etc_kr_key[row[0].strip().upper()] = row[0]
           etc_kr[row[0].strip()] = row[1]
   
-with open('../etcs_start.csv', 'w') as csvfile:
+with open('../etcs_start.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in etc_kr.items():
       spamwriter.writerow([key, val])
   
-with open('../tr_start.csv', 'w') as csvfile:
+with open('../tr_start.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])
@@ -80,43 +80,43 @@ for f in cn_list:
       if(f == temp_file):
         temp[tr_cn_key[key]] = ''
 
-  with open(result_dir + '/' + f, 'w') as csvfile:
+  with open(result_dir + '/' + f, 'w', encoding='utf8') as csvfile:
       spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
       for key, val in new_kr.items():
         spamwriter.writerow([key, val])
   
-with open(result_dir + '/etcs.csv', 'w') as csvfile:
+with open(result_dir + '/etcs.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in etc_kr.items():
       spamwriter.writerow([key, val])
 
 # speadsheet에 번역 완료로 올리기 위한 포맷으로 저장
-with open('../completed.csv', 'w') as csvfile:
+with open('../completed.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in completed.items():
       spamwriter.writerow([key, val])
 
 # speadsheet에 사용되지 않음으로 올리기 위한 포맷으로 저장
-with open('../non_use.csv', 'w') as csvfile:
+with open('../non_use.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in etc_kr.items():
       spamwriter.writerow([key, val])
 
 # 번역이 필요한 데이타 저장
-with open('../need_translate.csv', 'w') as csvfile:
+with open('../need_translate.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in need_kr.items():
       spamwriter.writerow([key, val])
   
 # 혹시 실수 한 것이 있을 수 있으므로 체크할 것에 대한 정보 저장
-with open('../check.csv', 'w') as csvfile:
+with open('../check.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in check.items():
       spamwriter.writerow([key, val])
 
 
 # 특정 파일 타겟으로 필요한 번역 정리
-with open('../temp.csv', 'w') as csvfile:
+with open('../temp.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in temp.items():
       spamwriter.writerow([key, val])

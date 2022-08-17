@@ -24,12 +24,12 @@ for key, val in tr_cn_key.items():
   except KeyError:
     pass
 
-with open('../spread_upload.csv', 'w') as csvfile:
+with open('../spread_upload.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter='	')
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])
 
-with open('../translate_kr.csv', 'w') as csvfile:
+with open('../translate_kr.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])

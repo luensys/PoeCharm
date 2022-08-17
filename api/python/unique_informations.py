@@ -62,6 +62,7 @@ for en_type, kr_type in unique_list.items():
   query = query_base.copy()
   query['query']['term'] = en_type
   response = requests.post(EN_URL + search_uri, json=query, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
+  print(response.text)
   result = json.loads(response.text)
   if not 'result' in result:
     print('is not response for sale')
@@ -117,7 +118,7 @@ for en_type, kr_type in unique_list.items():
   # count 수에 따라 한 번씩 저장 함
   if ((count % 10) == 0):
     # 유니크 정보 수정된 것 저장
-    with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
+    with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
         for key, val in desc_list.items():
           spamwriter.writerow([key, val])

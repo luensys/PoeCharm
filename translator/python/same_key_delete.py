@@ -12,7 +12,7 @@ with open(etc_file, 'r', encoding='utf8') as csvfile:
     tr_kr[row[0].strip()] = row[1]
     tr_kr_key[row[0].strip().upper()] = row[0]
 
-with open('../etcs_new.csv', 'w') as csvfile:
+with open('../etcs_new.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in tr_kr.items():
       spamwriter.writerow([key, val])

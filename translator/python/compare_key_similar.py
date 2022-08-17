@@ -93,7 +93,7 @@ for upper_key, cn_key in tr_cn_key.items():
       pass
   print(str(count) + ' of ' + str(len(tr_cn_key)) + ' text was compared')
 
-with open('../similar.csv', 'w') as csvfile:
+with open('../similar.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in similar_text.items():
       spamwriter.writerow([key, val[0], val[1]])

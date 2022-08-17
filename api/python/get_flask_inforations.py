@@ -56,7 +56,7 @@ for kr_type in kr_types:
         pass
     time.sleep(30)
     
-  with open('../Flask_tag.csv', 'w') as csvfile:
+  with open('../Flask_tag.csv', 'w', encoding='utf8') as csvfile:
       spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
       for key, val in tags.items():
         spamwriter.writerow([key, val])

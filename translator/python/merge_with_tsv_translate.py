@@ -72,7 +72,7 @@ for f in kr_list:
       if(f == temp_file):
         temp[orig_kr_key[key]] = ''
 
-  with open(result_dir + '/' + f, 'w') as csvfile:
+  with open(result_dir + '/' + f, 'w', encoding='utf8') as csvfile:
       spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
       for key, val in new_kr.items():
         spamwriter.writerow([key, val])

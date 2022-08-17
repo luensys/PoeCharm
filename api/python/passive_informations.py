@@ -131,31 +131,31 @@ for key, en_data in en_node.items():
           desc_list[txt_key] = kr_txt
 
 # name 정보 수정된 것 저장
-with open(result_dir + '/' + tree_dn_file, 'w') as csvfile:
+with open(result_dir + '/' + tree_dn_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in tree_dn_list.items():
       spamwriter.writerow([key, val])
 
 # stats 정보 수정된 것 저장
-with open(result_dir + '/' + tree_sd_file, 'w') as csvfile:
+with open(result_dir + '/' + tree_sd_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in tree_sd_list.items():
       spamwriter.writerow([key, val])
 
 # reminderText 정보 수정된 것 저장
-with open(result_dir + '/' + tree_rt_file, 'w') as csvfile:
+with open(result_dir + '/' + tree_rt_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in tree_rt_list.items():
       spamwriter.writerow([key, val])
 
 # reminderText 정보 수정된 것 저장
-with open(result_dir + '/' + passive_tree_file, 'w') as csvfile:
+with open(result_dir + '/' + passive_tree_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in passive_tree_list.items():
       spamwriter.writerow([key, val])
 
 # reminderText 정보 수정된 것 statDescriptions에 저장
-with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
+with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in desc_list.items():
       spamwriter.writerow([key, val])
