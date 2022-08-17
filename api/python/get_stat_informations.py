@@ -9,7 +9,8 @@ EN_URL = 'https://www.pathofexile.com/api/trade/data/stats'
 
 orig_tr_dir = '../../PoeCharm/Pob/translate_kr'
 stat_description_file = 'statDescriptions.csv'
-etc_file = 'etcs.csv'
+etcs_file = 'etcs.csv'
+temp_file = 'temp.csv'
 result_dir = '../../translator/translate_kr'
 
 def get_request(url):
@@ -21,11 +22,16 @@ def repl(m):
 repl.v=mit.seekable(('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}'))
 
 desc_list = {}
-etc_list = {}
+etcs_list = {}
+etcs = {}
 with open(orig_tr_dir + '/' + stat_description_file, 'r', encoding='utf8') as csvfile:
   read_csv = csv.reader(csvfile)
   for row in read_csv:
     desc_list[row[0]] = row[1]
+with open(orig_tr_dir + '/' + etcs_file, 'r', encoding='utf8') as csvfile:
+  read_csv = csv.reader(csvfile)
+  for row in read_csv:
+    etcs_list[row[0]] = row[1]
 
 en_stat = {}
 kr_stat = {}
@@ -66,16 +72,24 @@ for key, en_val in en_stat_list.items():
       if(key2.strip() == en_txt.strip()):
         desc_list[key2] = kr_txt
         exists = 1
+    for key2, val in etcs_list.items():
+      if(key2.strip() == en_txt.strip()):
+        etcs_list[key2] = kr_txt
+        exists = 1
         
     if(exists == 0) :
-      etc_list[en_txt.strip()] = kr_txt
+      etcs[en_txt.strip()] = kr_txt
 
 
 with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in desc_list.items():
       spamwriter.writerow([key, val])
-with open(result_dir + '/' + etc_file, 'w', encoding='utf8') as csvfile:
+with open(result_dir + '/' + etcs_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
-    for key, val in etc_list.items():
+    for key, val in etcs_list.items():
+      spamwriter.writerow([key, val])
+with open(result_dir + '/' + temp_file, 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in etcs.items():
       spamwriter.writerow([key, val])
