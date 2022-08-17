@@ -13,6 +13,7 @@ fetch_uri = '/fetch/'
 orig_tr_dir = '../../PoeCharm/Pob/translate_kr'
 unique_file = 'Uniques.txt.csv'
 stat_description_file = 'statDescriptions.csv'
+etc_file = 'etc.csv'
 result_dir = '../../translator/translate_kr'
 
 def get_request(url):
@@ -31,10 +32,11 @@ def repl(m):
 repl.v=mit.seekable(('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}'))
 
 # https://poe-query.vercel.app/ 참조
-query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}]},"sort":{"price":"asc"}}
+query_base = {"query":{"status":{"option":"any"},"stats":[{"type":"and","filters":[],"disabled":False}]},"sort":{"price":"asc"}}
 
 unique_list = {}
 desc_list = {}
+etc_list = {}
 with open(orig_tr_dir + '/' + unique_file, 'r', encoding='utf8') as csvfile:
   read_csv = csv.reader(csvfile)
   for row in read_csv:
@@ -62,7 +64,7 @@ for en_type, kr_type in unique_list.items():
   query = query_base.copy()
   query['query']['term'] = en_type
   response = requests.post(EN_URL + search_uri, json=query, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
-  print(response.text)
+  # print(response.text)
   result = json.loads(response.text)
   if not 'result' in result:
     print('is not response for sale')
@@ -98,6 +100,8 @@ for en_type, kr_type in unique_list.items():
         for key, val in desc_list.items():
           if(key.strip() == en_txt.strip()):
             desc_list[key] = kr_txt
+          else:
+            etc_list[en_txt.strip()] = kr_txt
 
     if 'explicitMods' in en_info['result'][0]['item']:
       for idx in range(len(kr_info['result'][0]['item']['explicitMods'])):
@@ -111,6 +115,8 @@ for en_type, kr_type in unique_list.items():
         for key, val in desc_list.items():
           if(key.strip() == en_txt.strip()):
             desc_list[key] = kr_txt
+          else:
+            etc_list[en_txt.strip()] = kr_txt
 
   else:
     print('item not exists')
@@ -121,6 +127,10 @@ for en_type, kr_type in unique_list.items():
     with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
         spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
         for key, val in desc_list.items():
+          spamwriter.writerow([key, val])
+    with open(result_dir + '/' + etc_file, 'w', encoding='utf8') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+        for key, val in etc_list.items():
           spamwriter.writerow([key, val])
     print(count, 'file saved')
 
