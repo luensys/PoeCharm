@@ -123,6 +123,37 @@ for key, en_data in en_node.items():
         tree_rt_list[en_txt] = kr_txt
       exist = False
 
+  if 'masteryEffects' in en_data:
+    for idx in range(len(en_data['masteryEffects'])):
+      en_masteryEffects = en_data['masteryEffects'][idx]
+      kr_masteryEffects = kr_node[key]['masteryEffects'][idx]
+
+      if 'stats' in en_masteryEffects:
+        for idx1 in range(len(en_masteryEffects['stats'])):
+          en_txt = en_masteryEffects['stats'][idx1]
+          kr_txt = kr_masteryEffects['stats'][idx1]
+
+          for txt_key, val in tree_sd_list.items():
+            if(txt_key.strip() == en_txt.strip()):
+              exist = True
+              tree_sd_list[txt_key] = kr_txt
+          if(exist != True):
+            tree_sd_list[en_txt] = kr_txt
+          exist = False
+
+      if 'reminderText' in en_masteryEffects:
+        for idx1 in range(len(en_masteryEffects['reminderText'])):
+          en_txt = en_masteryEffects['reminderText'][idx1]
+          kr_txt = kr_masteryEffects['reminderText'][idx1]
+
+          for txt_key, val in tree_rt_list.items():
+            if(txt_key.strip() == en_txt.strip()):
+              exist = True
+              tree_rt_list[txt_key] = kr_txt
+          if(exist != True):
+            tree_rt_list[en_txt] = kr_txt
+          exist = False
+
 # And statDescription
 for key, en_data in en_node.items():
   # stats 정리
