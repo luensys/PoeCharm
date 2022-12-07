@@ -2958,3 +2958,798 @@
 "30% increased Attack Physical Damage","공격 물리 피해 30% 증가"
 "Damage Penetrates 7% Chaos Resistance","피해가 카오스 저항 7% 관통"
 "25% less Damage over Time taken during Effect of any Life Flask","아무 생명력 플라스크나 효과를 받는 동안 받는 지속 피해 25% 감폭"
+"Gain a Blitz Charge on Critical Strike","치명타 명중 시 공세 충전 획득"
+"Warcries Sacrifice 10 Rage if you have at least 25 Rage
+Exerted Attacks deal 50% more Attack Damage if a Warcry Sacrificed Rage Recently","격노가 25 이상인 경우 함성이 10의 격노 소모
+최근 4초 이내 함성으로 격노를 소모한 경우 전력 공격이 주는 피해 50% 증폭"
+"Inherent effects from having Rage are Tripled","격노로 인해 생기는 효과 3배"
+"Nearby Enemies cannot gain Power, Frenzy or Endurance Charges","주변의 적이 권능, 격분 또는 인내 충전을 획득할 수 없음"
+"You and nearby Party Members Share Power, Frenzy and Endurance Charges with each other","자신 및 주변의 파티원이 권능, 격분, 인내 충전을 서로 공유"
+"Auras from your Skills grant 0.2% of Life Regenerated per second to
+you and Allies","자신의 오라 스킬이 자신 및 동료들에게
+1초마다 생명력의 0.2% 재생"
+"While there are at least five nearby Allies, you and nearby Allies have Onslaught","주변 동료들이 다섯 명 이상인 경우, 자신 및 주변 동료들이 맹공 획득"
+"Nearby Allies have 20% increased Attack, Cast and Movement Speed","주변 동료들의 공격, 시전 및 이동 속도 20% 증가"
+"Grants maximum Energy Shield equal to 10% of your Reserved Mana to
+you and nearby Allies","플레이어 및 주변 동료들에게 점유 마나의 10%와 동일한
+에너지 보호막 최대치 적용"
+"If you've Blocked in the past 10 seconds, you
+and nearby Allies cannot be Stunned","지난 10초 이내에 막아낸 경우
+자신 및 주변 동료들은 기절 면역"
+"If you've Attacked Recently, you
+and nearby Allies have +10% Chance to Block Attack Damage","최근 4초 이내 공격한 경우 자신 및
+주변 동료들의 공격 피해 막기 확률 +10%"
+"If you've Cast a Spell Recently, you
+and nearby Allies have +10% Chance to Block Spell Damage","최근 4초 이내 주문을 시전한 경우 자신 및
+주변 동료들의 주문 피해 막기 확률 +10%"
+"Every 10 seconds, gain 100% of Physical Damage
+as Extra Fire Damage for 4 seconds","10초마다 물리 피해의 100%를
+4초 동안 추가 화염 피해로 획득"
+"40% increased Life Regeneration rate","생명력 재생 속도 40% 증가"
+"1.5% of Physical Damage prevented from Hits in the past
+10 seconds is Regenerated as Life per second","1초마다 지난 10초 동안의 피격에서 예방한 물리 피해의 1.5%를 생명력으로 재생"
+"Cannot be Stunned","기절 면역"
+"Action Speed cannot be modified to below base value","동작 속도가 기본 수치 밑으로 내려가지 않음"
+"Movement Speed cannot be modified to below base value","이동 속도가 기본 수치 밑으로 내려가지 않음"
+"Armour received from Body Armour is doubled","갑옷으로 얻는 방어도 2배"
+"8% of Armour applies to Fire, Cold and Lightning Damage taken from Hits","피격 시 받는 화염, 냉기, 번개 피해에 방어도의 8% 적용"
+"Gain Accuracy Rating equal to twice your Strength","힘의 2배와 동일한 정확도 획득"
+"Gain Arcane Surge when you or your Totems Hit an Enemy with a Spell","자신 또는 자신의 토템이 주문으로 적 명중 시 비전 쇄도 획득"
+"Transfiguration of Mind","정신의 변모"
+"Unaffected by Ignite","점화의 영향을 받지 않음"
+"Totems are Immune to Fire Damage","토템이 화염 피해에 면역"
+"You have Consecrated Ground around you while stationary","정지 상태일 때 주변에 신성화 지대 생성"
+"Consecrated Ground you create causes Life Regeneration to
+also Recover Energy Shield for you and Allies","플레이어가 생성하는 신성화 지대가 생명력 재생 시 자신과 아군의 에너지 보호막도 회복"
+"Lose all Fanatic Charges on reaching Maximum Fanatic Charges","최대 광신 충전에 도달 시 모든 광신 충전을 상실"
+"Battlemage","전투마법사"
+"Critical Strikes ignore Enemy Monster Elemental Resistances","치명타 시 적 몬스터의 원소 저항을 무시"
+"Cannot be Chilled","냉각 면역"
+"Nearby Enemies take 10% increased Elemental Damage","주변의 적이 받는 원소 피해 10% 증가"
+"Grants 1 Passive Skill Point","패시브 스킬 포인트 1포인트 제공"
+"Can Allocate Passives from the Templar's starting point","템플러의 시작 포인트에서 패시브 스킬 할당 가능"
+"Grants 2 Passive Skill Points","패시브 스킬 포인트 2포인트 제공"
+"Can Allocate Passives from the Marauder's starting point","머라우더의 시작 포인트에서 패시브 스킬 할당 가능"
+"Culling Strike","마무리 타격"
+"Life Leech effects are not removed when Unreserved Life is Filled","점유되지 않은 생명력이 찼을 때 생명력 흡수 효과가 제거되지 않음"
+"Cannot take Reflected Physical Damage","반사된 물리 피해를 받지 않음"
+"Transfiguration of Body","육체의 변모"
+"Your Hits permanently Intimidate Enemies that are on Full Life","생명력이 최대인 적 명중 시 영구적으로 적 위협"
+"Can Allocate Passives from the Duelist's starting point","듀얼리스트의 시작 포인트에서 패시브 스킬 할당 가능"
+"Can Allocate Passives from the Witch's starting point","위치의 시작 포인트에서 패시브 스킬 할당 가능"
+"Cannot take Reflected Elemental Damage","반사된 원소 피해를 받지 않음"
+"Your Offering Skills also affect you","공물 스킬이 자신에게도 영향을 미침"
+"Auras from your Skills grant 2% increased Attack and Cast
+Speed to you and Allies","자신의 오라 스킬이 플레이어 및 동료들에게
+공격 및 시전 속도 2% 증가 적용"
+"You can apply an additional Curse","추가 저주 1개 적용 가능"
+"Cannot Be Stunned while you have Energy Shield","에너지 보호막이 있는 동안 기절 면역"
+"You have Onslaught while on full Frenzy Charges","격분 충전이 최대일 때 맹공 획득"
+"Phasing","차원 능력"
+"Can Allocate Passives from the Shadow's starting point","쉐도우의 시작 포인트에서 패시브 스킬 할당 가능"
+"Can Allocate Passives from the Ranger's starting point","레인저의 시작 포인트에서 패시브 스킬 할당 가능"
+"Projectiles gain Damage as they travel farther, dealing up
+to 50% increased Damage with Hits to targets","투사체 이동 거리가 멀어질수록
+대상 명중 시 피해 최대 50% 증가"
+"Skills fire an additional Projectile","스킬이 투사체 1개 추가 발사"
+"You and nearby Allies have Tailwind","자신 및 주변 동료들이 순풍 획득"
+"Damage from your Critical Strikes cannot be Reflected","치명타로 주는 피해가 반사되지 않음"
+"Prevent +6% of Suppressed Spell Damage while on Full Energy Shield","에너지 보호막이 최대일 때 억제된 주문 피해의 +6% 방지"
+"2% more Damage for each different type of Mastery you have Allocated","할당한 숙련의 각기 다른 유형 하나당 피해 2% 증폭"
+"2% of Damage Leeched as Energy Shield","피해의 2%를 에너지 보호막으로 흡수"
+"Nearby Enemy Monsters' Action Speed is at most 92% of base value","주변 적 몬스터의 동작 속도가 기본 수치의 최대 92%"
+"Cannot Recover Energy Shield to above Armour
+3% of Physical Damage prevented from Hits Recently is Regenerated as Energy Shield per second","에너지 보호막 회복량은 방어도를 넘어갈 수 없음
+1초당 최근 4초 이내의 피격에서 방지한 물리 피해의 3%를 에너지 보호막으로 재생"
+"Your hits can't be Evaded
+Never deal Critical Strikes","플레이어가 무조건 명중
+치명타가 발동하지 않음"
+"Maximum Energy Shield is 0
+While not on Full Life, Sacrifice 20% of Mana per Second to Recover that much Life","에너지 보호막 최대치가 0이 됨
+생명력이 최대가 아닐 경우, 1초마다 마나의 20%를 희생하여 그와 동일한 수치의 생명력 회복"
+"Increases and Reductions to Minion Damage also affect you","소환수 피해의 증가 및 감소가 자신에게도 적용"
+"Damage with Weapons Penetrates 5% Elemental Resistances","무기로 주는 피해가 5%의 원소 저항 관통"
+"10% increased Effect of Arcane Surge on you per
+200 Mana spent Recently, up to 50%","최근 4초 이내 사용한 마나 200당
+비전 쇄도 효과 10% 증가, 최대 50%"
+"You can't deal Damage with Skills yourself
++1 to maximum number of Summoned Totems","스킬을 사용하여 직접 피해를 줄 수 없음
+소환 가능한 토템 최대치 +1"
+"Removes all mana
+10% more maximum Life
+Skills Cost Life instead of Mana
+Skills Reserve Life instead of Mana","모든 마나를 제거
+최대 생명력 10% 증폭
+스킬 사용 시 마나 대신 생명력 소모
+스킬 사용 시 마나 대신 생명력 점유"
+"Knocks Back Enemies if you get a Critical Strike with a Staff","지팡이로 치명타를 가하는 경우 적을 밀어냄"
+"Damage with Weapons Penetrates 2% Elemental Resistances","무기로 주는 피해가 2%의 원소 저항 관통"
+"Chance to Block Attack Damage is doubled
+Chance to Block Spell Damage is doubled
+You take 65% of Damage from Blocked Hits","공격 피해 막기 확률 2배
+주문 피해 막기 확률 2배
+피격을 막아낼 시 65%의 피해를 받음"
+"50% of Physical, Cold and Lightning Damage Converted to Fire Damage
+Deal no Non-Fire Damage","물리, 냉기 및 번개 피해의 50%를 화염 피해로 전환
+화염 피해만 줄 수 있음"
+"+30% to Critical Strike Multiplier for Spell Damage","주문 피해의 치명타 피해 배율 +30%"
+"+10% to Critical Strike Multiplier for Spell Damage","주문 피해의 치명타 피해 배율 +10%"
+"-1 to maximum number of Summoned Totems
+You can have an additional Brand Attached to an Enemy","소환 가능한 토템 최대치 -1
+적에게 낙인 1개 추가 부착 가능"
+"Using Warcries is Instant
+Warcries share their Cooldown","함성 즉시 사용
+함성 스킬끼리 재사용 대기시간 공유"
+"Minions have 20% increased Critical Strike Chance","소환수의 치명타 확률 20% 증가"
+"Minions have 25% increased Critical Strike Chance","소환수의 치명타 확률 25% 증가"
+"Minions have 60% increased Critical Strike Chance","소환수의 치명타 확률 60% 증가"
+"Minions have +20% to Critical Strike Multiplier","소환수의 치명타 피해 배율 +20%"
+"Increases and Reductions to Minion Attack Speed also affect you","소환수 공격 속도 증가 및 감소 효과가 자신에게도 적용"
+"Enemies Cannot Leech Life From you","적이 플레이어의 생명력을 흡수할 수 없음"
+"40% increased Fortification Duration","방어 상승 지속시간 40% 증가"
+"Life Regeneration is applied to Energy Shield instead","생명력 재생이 에너지 보호막에 대신 적용"
+"100% chance to Defend with 200% of Armour
+Maximum Damage Reduction for any Damage Type is 50%","100% 확률로 200%의 방어도로 방어
+모든 피해 유형에 대한 피해 감소의 최대치는 50%"
+"50% less Life Regeneration Rate
+50% less maximum Total Life Recovery per Second from Leech
+Energy Shield Recharge instead applies to Life","생명력 재생 속도 50% 감폭
+흡수 시 초당 총 생명력 회복량 최대치 50% 감폭
+에너지 보호막 재충전이 생명력에 대신 적용"
+"+1 to Maximum number of Spectres","망령 최대치 +1"
+"+1 to Maximum number of Raised Zombies","소환 가능한 좀비 최대치 +1"
+"+1 to Maximum number of Skeletons","해골 최대치 +1"
+"Skills that have dealt a Critical Strike in the past 8 seconds deal 40% more Elemental Damage with Hits and Ailments
+Your Critical Strikes do not deal extra Damage
+Ailments never count as being from Critical Strikes","지난 8초 이내에 치명타 명중 시 해당 스킬의 명중 및 상태 이상 원소 피해 40% 증폭
+플레이어의 치명타가 추가 피해를 주지 않음
+상태 이상은 치명타로 유발하는 것으로 간주하지 않음"
+"40% of Damage is taken from Mana before Life","피해의 40%를 생명력 대신 마나로 소모"
+"When your Hits Impale Enemies, also Impale other Enemies near them
+Inflict 4 additional Impales on Enemies you Impale
+For 4 seconds after you Impale Enemies, they cannot be Impaled again, and Impales cannot be Called from them","플레이어가 명중시켜 적을 꿰뚫을 경우 근처의 다른 적도 꿰뚫음
+플레이어가 꿰뚫은 적에게 꿰뚫기 4회 추가 부여
+적을 꿰뚫은 후 4초 동안은 해당 적을 꿰뚫을 수 없으며 강철의 부름으로 해당 적의 꿰뚫기를 제거할 수 없음"
+"Cannot Evade enemy Attacks
+Cannot be Stunned","적 공격을 회피할 수 없음
+기절 면역"
+"Cannot be Stunned by Hits you Block","피격을 막을 경우 기절 면역"
+"Your Counterattacks deal Double Damage","반격으로 2배의 피해를 줌"
+"Gain a Challenger Charge when you Kill an Enemy while in Sand Stance","모래 태세에서 적 처치 시 도전자 충전 획득"
+"Bleeding Enemies you Kill Explode, dealing 10% of
+their Maximum Life as Physical Damage","출혈 중인 적을 처치하면 적이 폭발하여
+최대 생명력의 10%를 물리 피해로 줌"
+"Attacks Maim on Hit against Bleeding Enemies","출혈 중인 적 명중 시 힘줄 절단 유발"
+"You can inflict Bleeding on an Enemy up to 8 times
+Your Bleeding does not deal extra Damage while the Enemy is moving
+50% less Damage with Bleeding","적에게 최대 8회 출혈 유발 가능
+적이 이동하는 동안 당신이 유발한 출혈의 추가 피해를 받지 않음
+출혈 피해 50% 감폭"
+"Regenerate 2% of Energy Shield per second for each
+Enemy you or your Minions have Killed Recently, up to 10% per second","최근 4초 이내 플레이어 또는 소환수가 처치한 적 하나당
+1초마다 에너지 보호막의 2% 재생. 최대 10% 재생"
+"Cannot be Frozen","동결 면역"
+"Your Hexes can affect Hexproof Enemies","플레이어의 사술이 사술 방지 적에게 영향을 줌"
+"Enemies you Curse have Malediction","저주를 건 적에게 악담 추가"
+"Fortifying Hits grant 40% increased Fortification","명중 시 적용하는 방어 상승 40% 증가"
+"Strength's Damage bonus applies to all Spell Damage as well","모든 주문 피해에 힘의 피해 보너스 적용"
+"Converts all Evasion Rating to Armour. Dexterity provides no bonus to Evasion Rating","모든 회피를 방어도로 전환, 민첩으로 회피에 적용되는 보너스 없음"
+"Strength's Damage bonus applies to Projectile Attack Damage as well as Melee Damage","근접 피해뿐만 아니라 투사체 공격 피해에도 힘의 피해 보너스 적용"
+"All bonuses from an Equipped Shield apply to your Minions instead of you","장착한 방패가 주는 모든 보너스를 자신 대신 소환수에게 적용"
+"Remove Bleeding when you use a Guard Skill","수호 스킬 사용 시 출혈 제거"
+"Remove Corrupted Blood when you use a Guard Skill","수호 스킬 사용 시 타락한 피 제거"
+"Triggers Level 20 Primal Aegis when Allocated
+Primal Aegis can take 75 Elemental Damage per Allocated Notable Passive Skill","할당 시 20레벨 원시 비호 발동
+원시 비호가 할당된 주요 패시브 스킬 하나당 75의 원소 피해를 받을 수 있음"
+"Other Aegis Skills are Disabled","다른 비호 스킬들이 비활성화됨"
+"Summoned Golems are Immune to Elemental Damage","소환된 골렘이 원소 피해에 면역"
+"Hits always Ignite","플레이어가 적중 시 항상 점화 유발"
+"All Damage can Ignite","모든 피해가 점화 유발"
+"Hits always Shock","플레이어가 적중 시 항상 감전 유발"
+"All Damage can Shock","모든 피해가 감전 유발"
+"All Damage with Hits can Chill","모든 적중 피해가 냉각 유발"
+"Enemies Taunted by you cannot Evade Attacks","플레이어가 도발한 적은 공격 회피 불가"
+"You and Allies affected by your placed Banners Regenerate 0.1% of
+Life per second for each Stage","설치한 깃발의 영향을 받는 플레이어 및 동료들이
+각 단계에서 1초마다 생명력의 0.1% 재생"
+"Banner Skills have no Reservation","깃발 스킬로 인한 점유 없음"
+"Gain Adrenaline for 20 seconds when you reach Low Life","낮은 생명력 상태가 되면20초 동안 아드레날린 획득"
+"Remove all Ailments and Burning when you gain Adrenaline","아드레날린 획득 시 모든 상태 이상 및 화상 제거"
+"If you've Impaled an Enemy Recently, you
+and nearby Allies have +1000 to Armour","최근 4초 이내 적을 꿰뚫은 경우, 자신 및
+주변 동료들의 방어도 +1000"
+"You and nearby Allies deal 6 to 12 added Physical Damage for
+each Impale on Enemy","자신 및 주변 동료들이 적을 꿰뚫을 때마다
+물리 피해 6~12 추가"
+"Cannot be Stunned while Fortified","방어 상승 상태에서 기절 면역"
+"Enemies Taunted by you deal 20% less Damage with Hits and
+Ailments against other targets","플레이어가 도발한 적이 다른 대상에게 주는
+적중 및 상태 이상 피해 20% 감폭"
+"Transfiguration of Soul","영혼의 변모"
+"+15% to Critical Strike Multiplier for Spell Damage","주문 피해의 치명타 피해 배율 +15%"
+"Ignore all Movement Penalties from Armour","갑옷으로 인한 모든 이동 페널티 무시"
+"Gain 15 Mana per Enemy Killed","처치한 적 하나당 마나 15 획득"
+"Intelligence provides no inherent bonus to Energy Shield
+2% reduced Duration of Elemental Ailments on you per 15 Intelligence","지능이 에너지 보호막에 직접적인 보너스를 주지 않음
+플레이어에게 적용되는 원소 상태 이상의 지속시간이 지능 15당 2% 감소"
+"Dexterity provides no inherent bonus to Evasion Rating
++1% Chance to Suppress Spell Damage per 15 Dexterity","민첩이 회피에 직접적인 보너스를 주지 않음
+민첩 15당 주문 피해 억제 확률 +1%"
+"Your Hex Curse Spells create a Hexed Area for 1 second if you Cast them yourself
+Enemies in the Hexed Area are Hexed, and the Hex does not expire while in the Hexed Area
+Hexes applied this way do not gain Doom over time
+Hexes in the Hexed Area gain up to maximum Doom when the Hexed Area ends","사술 저주 주문 직접 시전 시 1초 동안 사술 지역을 생성. 사술 지역에 있는 적은 사술에 걸리며,
+사술 지역 안에 있는 동안에는 사술이 만료되지 않음.
+이로 인해 걸린 사술은 지속적으로 멸망을 획득하지 않음.
+사술 지역 종료 시 지역 내의 사술이 최대 멸망 획득"
+"Gain 10 Life per Enemy Killed","처치한 적 하나당 생명력 10 획득"
+"For each nearby corpse, you and nearby Allies Regenerate 5 Mana
+per second, up to 50 per second","주변의 시신 하나당 자신 및 주변 동료들이
+1초마다 마나 5 재생, 최대 50 재생"
+"Auras from your Skills grant 3% increased Attack and Cast
+Speed to you and Allies","자신의 오라 스킬이 플레이어 및 동료들에게
+공격 및 시전 속도 3% 증가 적용"
+"Enemies near corpses you Spawned Recently are Chilled and Shocked","최근 4초 이내 자신이 생성한 시신 주변의 적들이 냉각 및 감전"
+"Minions have Unholy Might","소환수가 불경한 힘 보유"
+"Share Endurance, Frenzy and Power Charges with nearby party members","주변의 파티원과 인내, 격분 및 권능 충전 공유"
+"-25% to maximum Chance to Block Attack Damage
+-25% to maximum Chance to Block Spell Damage
++2% Chance to Block Spell Damage for each 1% Overcapped Chance to Block Attack Damage","공격 피해 막기 확률 최대치 -25%
+주문 피해 막기 확률 최대치 -25%
+제한 초과 공격 피해 막기 확률 1%당 주문 피해 막기 확률 +2%"
+"Cannot be Stunned while Leeching","흡수하는 동안 기절 면역"
+"You are Unaffected by Bleeding while Leeching","흡수의 영향을 받는 동안 출혈의 영향을 받지 않음"
+"Your Maximum Endurance Charges is equal to your Maximum Frenzy Charges","인내 충전 최대치가 격분 충전 최대치와 동일"
+"Nearby Enemies have -30% to Critical Strike Multiplier","주변의 적의 치명타 피해 배율 -30%"
+"Moving while Bleeding doesn't cause Minions to take extra Damage","출혈 상태에서 이동해도 소환수가 추가 피해를 받지 않음"
+"Total Recovery per second from Life Leech is doubled
+Maximum total Life Recovery per second from Leech is doubled
+Life Regeneration has no effect","생명력 흡수로 인한 초당 총 회복량 2배로 증가
+흡수로 인한 초당 총 생명력 회복량 최대치 2배로 증가
+생명력 재생은 작동하지 않음"
+"8% chance to gain Phasing for 4 seconds on Kill","처치 시 8%의 확률로 4초 동안 차원 능력 획득"
+"Energy Shield Recharge is not interrupted by Damage if Recharge began Recently
+40% less Energy Shield Recharge Rate","에너지 보호막 재충전을 최근 4초 이내 시작했을 경우 피해를 받아도 중단되지 않음
+에너지 보호막 재충전 속도 40% 감폭"
+"Gain 15 Life per Enemy Killed","처치한 적 하나당 생명력 15 획득"
+"Hits that deal Elemental Damage remove Exposure to those Elements and inflict Exposure to other Elements
+Exposure inflicted this way applies -25% to Resistances","명중으로 원소 피해를 주면 해당 원소의 노출을 제거하고 다른 원소의 노출 유발
+이렇게 유발된 노출은 저항 -25% 적용"
+"+15% chance to Suppress Spell Damage if you've Hit an Enemy Recently","최근 4초 이내 적 명중 시 주문 피해 억제 확률 +15%"
+"Corpses you Spawn have 5% increased Maximum Life","자신이 생성한 시체의 최대 생명력 5% 증가"
+"Culling Strike against Marked Enemy","징표가 찍힌 적에게 마무리 타격 가능"
+"Spend Energy Shield before Mana for Skill Mana Costs
+Energy Shield protects Mana instead of Life
+50% less Energy Shield Recharge Rate","스킬 사용 시 마나 대신 에너지 보호막 소모
+에너지 보호막이 생명력 대신 마나 보호
+에너지 보호막 재충전 속도 50% 감폭"
+"15% increased Accuracy Rating with Bows","활 사용 시 정확도 15% 증가"
+"Auras from your Skills can only affect you
+Aura Skills have 1% more Aura Effect per 2% of maximum Mana they Reserve
+40% more Mana Reservation of Aura Skills","자신의 스킬로 발생하는 오라가 자신에게만 영향을 미침
+오라 스킬이 점유하는 최대 마나의 2%마다 오라 효과가 1% 증폭
+오라 스킬의 마나 점유 40% 증폭"
+"10% increased Critical Strike Chance for each Mine Detonated
+Recently, up to 100%","최근 4초 이내 폭발한 지뢰 하나당
+치명타 확률 10% 증가, 최대 100%"
+"+4% to Critical Strike Multiplier for each Mine Detonated
+Recently, up to 40%","최근 4초 이내 폭발한 지뢰 하나당
+치명타 피해 배율 +4%. 최대 40%"
+"Chaos Resistance is doubled","카오스 저항 2배"
+"Gain 10 Mana per Enemy Killed","처치한 적 하나당 마나 10 획득"
+"40% more Attack Damage if Accuracy Rating is higher than Maximum Life
+Never deal Critical Strikes","정확도가 최대 생명력보다 높으면 공격 피해 40% 증폭
+치명타가 발동하지 않음"
+"Gain 4 Mana per Enemy Hit with Attacks if you've used a Mana Flask in the past 10 seconds","지난 10초 이내에 마나 플라스크를 사용한 경우 공격으로 명중하는 적 하나당 마나 4 획득"
+"Critical Strikes with Daggers Poison the Enemy","단검으로 치명타 시 적 중독 유발"
+"Gain 10 Life per Enemy Hit with Attacks","플레이어의 공격으로 명중하는 적 하나당 획득하는 생명력 10"
+"Gain 5 Life per Enemy Hit with Attacks","플레이어의 공격으로 명중하는 적 하나당 획득하는 생명력 5"
+"Life Flasks gain a Charge when you hit an Enemy, no more than once each second","적 명중 시 생명력 플라스크 1 충전, 1초마다 최대 1번 충전"
+"100% increased Critical Strike Chance against Shocked Enemies","감전된 적에 대한 치명타 확률 100% 증가"
+"+12% to Critical Strike Multiplier with Lightning Skills","번개 스킬 치명타 피해 배율 +12%"
+"Take 50% less Damage over Time if you've started taking Damage over Time in the past second
+100% more Duration of Ailments on you","지난 1초 내에 지속 피해를 받기 시작한 경우 지속 피해 50% 감폭
+플레이어에게 적용된 상태 이상의 지속시간 100% 증폭"
+"Gain 6 Life per Enemy Hit with Attacks","플레이어의 공격으로 명중하는 적 하나당 획득하는 생명력 6"
+"Projectiles gain Damage as they travel farther, dealing up
+to 60% increased Damage with Hits to targets","투사체 이동 거리가 멀어질수록
+대상 명중 시 피해 최대 60% 증가"
+"Projectiles deal 40% increased Damage with Hits to targets at the start
+of their movement, reducing to 0% as they travel farther","투사체가 발사 지점에 있는 대상에게 명중하는 경우
+피해 40% 증가, 투사체의 이동 거리가 멀어질수록 0%로 감소"
+"20% less Attack Damage taken if you haven't been Hit by an Attack Recently
+10% more chance to Evade Attacks if you have been Hit by an Attack Recently
+20% more Attack Damage taken if you have been Hit by an Attack Recently","최근 4초 이내 공격에 피격되지 않은 경우 받는 공격 피해 20% 감폭
+최근 4초 이내 공격에 피격된 경우 공격 회피 확률 10% 증폭
+최근 4초 이내 공격에 피격된 경우 받는 공격 피해 20% 증폭"
+"+8% chance to Suppress Spell Damage","주문 피해 억제 확률 +8%"
+"Gain 3 Mana per Enemy Hit with Attacks","공격으로 명중한 적 하나당 마나 3 획득"
+"Gain 15 Energy Shield per Enemy Killed","처치한 적 하나당 에너지 보호막 15 획득"
+"15% increased Blind Effect","실명 효과 15% 증가"
+"40% increased Blind Effect","실명 효과 40% 증가"
+"Remove Maim and Hinder when you use a Flask","플라스크 사용 시 힘줄 절단 및 이동 방해 제거"
+"Gain 4 Life per Enemy Hit with Attacks","플레이어의 공격으로 명중하는 적 하나당 획득하는 생명력 4"
+"Gain 2 Mana per Enemy Hit with Attacks","공격으로 명중한 적 하나당 마나 2 획득"
+"Evasion Rating is Doubled against Projectile Attacks
+25% less Evasion Rating against Melee Attacks","투사체 공격에 대한 회피 2배로 증가
+근접 공격에 대한 회피 25% 감폭"
+"+15% chance to Suppress Spell Damage","주문 피해 억제 확률 +15%"
+"Cannot Recover Energy Shield to above Evasion Rating
+Every 2 seconds, gain a Ghost Shroud, up to a maximum of 3
+When Hit, lose a Ghost Shroud to Recover Energy Shield equal to 3% of your Evasion Rating","에너지 보호막 회복량은 회피를 넘어갈 수 없음
+2초마다 유령 연막을 1개 획득, 최대 3개
+피격 시 유령 연막을 1개 잃고 회피의 3%와 동일한 에너지 보호막 회복"
+"Modifiers to Critical Strike Multiplier also apply to Damage over Time Multiplier for Ailments from Critical Strikes at 50% of their value
+30% less Damage with Hits","치명타 피해 배율 속성 부여의 50%가 치명타로 인한 상태 이상 지속 피해 배율에도 적용됨
+명중 시 피해 30% 감폭"
+"Leech Energy Shield instead of Life
+Maximum total Energy Shield Recovery per second from Leech is doubled
+Cannot Recharge Energy Shield","생명력 대신 에너지 보호막을 흡수
+흡수 시 1초당 총 에너지 보호막 회복량 최대치가 2배로 증가
+에너지 보호막 재충전 불가"
+"Modifiers to Chance to Suppress Spell Damage instead apply to Chance to Dodge Spell Hits at 50% of their value
+Maximum Chance to Dodge Spell Hits is 75%","주문 피해 억제 확률 속성 부여가 주문 피해 억제 확률이 아닌 주문 명중 완벽회피에 50%의 수치로 적용
+주문 명중 완벽회피 확률의 최대치는 75%"
+"Projectiles Pierce an additional Target","투사체가 대상을 추가 관통"
+"Attack Projectiles Return to you from final Target","공격 투사체가 마지막 대상 명중 후 자신에게 돌아옴"
+"Returning Projectiles Pierce all Targets","돌아오는 투사체가 모든 대상 관통"
+"Gain Elusive on Critical Strike","치명타 명중 시 도피 획득"
+"You take no Extra Damage from Critical Strikes while Elusive","도피 중 치명타로 받는 추가 피해 없음"
+"Critical Strikes have Culling Strike","치명타 시 마무리 타격 가능"
+"Enemies you Kill that are affected by Elemental Ailments
+grant 100% increased Flask Charges","원소 상태 이상이 유발된 적 처치 시
+플라스크 충전량 100% 증가"
+"When you kill a Poisoned Enemy during any Flask Effect, nearby Enemies are Poisoned","아무 플라스크나 효과를 받는 동안 플레이어가 중독된 적 처치 시 주변의 적 중독 유발"
+"Removes Bleeding when you use a Flask","플라스크 사용 시 출혈 제거"
+"Removes Corrupted Blood when you use a Flask","플라스크 사용 시 타락한 피 제거"
+"Gain a Flask Charge when you deal a Critical Strike","치명타 명중 시 플라스크 1 충전"
+"Magic Utility Flasks applied to you have 20% increased Effect","자신에게 적용된 마법 특수 플라스크의 효과 20% 증가"
+"Removes Elemental Ailments when you use a Flask","플라스크 사용 시 원소 상태 이상 제거"
+"20% increased Attack and Cast Speed while Leeching Energy Shield","에너지 보호막을 흡수하는 동안 공격 및 시전 속도 20% 증가"
+"Energy Shield Leech effects are not removed when Energy Shield is Filled","에너지 보호막이 찼을 때 에너지 보호막 흡수 효과가 제거되지 않음"
+"Prevent +10% of Suppressed Spell Damage while on Full Energy Shield","에너지 보호막이 최대일 때 억제된 주문 피해의 +10% 방지"
+"50% chance for Energy Shield Recharge to start when you Suppress Spell Damage","주문 피해 억제 시 50%의 확률로 에너지 보호막 재충전 시작"
+"40% increased total Recovery per second from Energy Shield Leech","에너지 보호막 흡수로 인한 초당 총 회복량 40% 증가"
+"Your Action Speed is at least 108% of base value","플레이어의 동작 속도가 기본 수치의 108% 이상"
+"200% increased Charge Duration","충전 지속시간 200% 증가"
+"+2 to Maximum Frenzy Charges","격분 충전 최대치 +2"
+"3% more Damage for each different type of Mastery you have Allocated","할당한 숙련의 각기 다른 유형 하나당 피해 3% 증폭"
+"Recover 1% of Life on Kill for each different type of Mastery you have Allocated","할당한 숙련의 각기 다른 유형 하나당 처치 시 생명력의 1% 회복"
+"Recover 1% of Energy Shield on Kill for each different type of Mastery you have Allocated","할당한 숙련의 각기 다른 유형 하나당 처치 시 에너지 보호막의 1% 회복"
+"Recover 1% of Mana on Kill for each different type of Mastery you have Allocated","할당한 숙련의 각기 다른 유형 하나당 처치 시 마나의 1% 회복"
+"Every 10 seconds:
+Take 40% less Damage from Hits for 5 seconds
+Take 40% less Damage over Time for 5 seconds","10초마다:
+5초 동안 피격 시 받는 피해 40% 감폭
+5초 동안 받는 지속 피해 40% 감폭"
+"Mines Hinder Enemies near them for 2 seconds when they Land,
+reducing Movement Speed by 40%","지뢰 설치 시 주변의 적들을 이동 방해하여 2초 동안
+이동 속도 40% 감소"
+"When your Traps Trigger, your nearby Traps also Trigger","자신의 덫 발동 시 주변의 덫도 발동"
+"Immune to Ignite and Shock","점화 및 감전에 면역"
+"Cannot be Blinded","실명 면역"
+"Nearby Enemies are Blinded","주변의 적 실명 유발"
+"Blind Enemies on Hit","명중 시 적 실명 유발"
+"Onslaught","맹공"
+"Critical Strikes which inflict Bleeding also inflict Rupture","출혈을 유발하는 치명타가 파열도 유발"
+"Gain 1 Gale Force when you use a Skill
+15% increased Effect of Tailwind on you per Gale Force","스킬 사용 시 강풍의 힘 1개 획득
+강풍의 힘 하나당 플레이어에게 적용되는 순풍 효과 15% 증가"
+"Mirage Archers are not attached to you","신기루 궁수가 플레이어에게 붙어 있지 않음"
+"Cannot Summon Mirage Archers while near your Mirage Archers","플레이어의 신기루 궁수 근처에 있을 때 신기루 궁수 소환 불가"
+"Your Mark transfers to another Enemy when Marked Enemy dies","징표가 찍힌 적이 사망하면 징표가 다른 적에게 전이됨"
+"Lose all Gale Force when Hit","피격 시 강풍의 힘 모두 잃음"
+"Far Shot","장거리 사격"
+"Projectile Barrages have no spread","투사체 연발 사격이 확산되지 않음"
+"Every second, Consume a nearby Corpse to Recover 5% of Life and Mana
+10% more Damage taken if you haven't Consumed a Corpse Recently","1초마다 주변의 시체 1구를 소모해 생명력 및 마나의 5% 회복
+최근 4초 이내 시체를 소모하지 못했을 경우 받는 피해 10% 증폭"
+"You can only have one Herald
+50% more Effect of Herald Buffs on you
+100% more Damage with Hits from Herald Skills
+50% more Damage Over Time with Herald Skills
+Minions from Herald Skills deal 25% more Damage
+Your Aura Skills are Disabled","전령 1마리만 보유 가능
+플레이어에게 적용되는 전령의 버프 효과 50% 증폭
+전령 스킬로 명중 시 피해 100% 증폭
+전령 스킬의 지속 피해 50% 증폭
+전령 스킬로 소환된 소환수가 주는 피해 25% 증폭
+플레이어의 오라 스킬 사용 불가"
+"Gain 2 Grasping Vines each second while stationary
+2% chance to deal Double Damage per Grasping Vine
+1% less Damage taken per Grasping Vine","정지 상태일 때 1초마다 탐욕스러운 덩굴 2개 획득
+탐욕스러운 덩굴 1개당 %의 확률로 2배의 피해를 줌
+탐욕스러운 덩굴 1개당 받는 피해 1% 감폭"
+"Cannot Ignite, Chill, Freeze or Shock
+Critical Strikes inflict Scorch, Brittle and Sapped","점화, 냉각, 동결, 혹은 감전 유발 불가
+치명타가 그을림, 허약, 활력 감소 유발"
+"Attack Projectiles always inflict Bleeding and Maim, and Knock Back Enemies
+Projectiles cannot Pierce, Fork or Chain","공격 투사체가 항상 출혈 및 힘줄 절단을 유발하고 적을 밀어냄
+투사체는 관통, 갈래, 연쇄 불가"
+"+10% to all Elemental Resistances and maximum Elemental Resistances while affected by a Non-Vaal Guard Skill
+20% additional Physical Damage Reduction while affected by a Non-Vaal Guard Skill
+20% more Damage taken if a Non-Vaal Guard Buff was lost Recently","비-바알 수호 스킬의 영향을 받는 동안 모든 원소 저항 및 원소 저항 최대치 +10%
+비-바알 수호 스킬의 영향을 받는 동안 받는 물리 피해 20% 추가 감소
+최근 4초 이내 비-바알 수호 버프를 상실한 경우 받는 피해 20% 증폭"
+"You count as Dual Wielding while you are Unencumbered
+40% more Attack Speed with Melee Skills while you are Unencumbered
+Adds 14 to 20 Attack Physical Damage to Melee Skills per 10 Dexterity while you are Unencumbered","홀가분 상태에서는 쌍수 사용 취급
+홀가분 상태에서 공격 속도 40% 증폭
+홀가분 상태에서 민첩 10당 공격 물리 피해 14~20 추가"
+"1% increased Fishing Line Strength","낚싯줄 강도 1% 증가"
+"3% Chance to Block Spell Damage","3%의 확률로 주문 피해를 막아냄"
+"+3% Chance to Block Attack Damage","공격 피해를 막아낼 확률 +3%"
+"Attack Skills deal 30% increased Damage while holding a Shield","방패를 들고 있는 동안 공격 스킬로 주는 피해 30% 증가"
+"5% increased Movement Speed while holding a Shield","방패를 들고 있는 동안 이동 속도 5% 증가"
+"+2 to Melee Strike Range while Holding a Shield","방패를 들고 있는 동안 근접 타격 범위 +2"
+"+6% Chance to Block Spell Damage while at Maximum Power Charges","최대 권능 충전 상태에서 주문 피해를 막아낼 확률 +6%"
+"20% chance to gain an Endurance Charge when you Block","막아낼 시 20%의 확률로 인내 충전 획득"
+"+6% Chance to Block Attack Damage while at Maximum Endurance Charges","최대 인내 충전 상태에서 공격 피해를 막아낼 확률 +6%"
+"Attack Skills deal 25% increased Damage while holding a Shield","방패를 들고 있는 동안 공격 스킬로 주는 피해 25% 증가"
+"60% increased Critical Strike Chance if you haven't Blocked Recently","최근 4초 이내 막기를 하지 않은 경우 치명타 확률 60% 증가"
+"+30% to Critical Strike Multiplier if you have Blocked Recently","최근 4초 이내 막아낸 경우 치명타 피해 배율 +30%"
+"+15 to all Attributes","모든 능력치 +15"
+"+15% Elemental Resistances while holding a Shield","방패를 들고 있는 동안 원소 저항 +15%"
+"35% increased Physical Damage","물리 피해 35% 증가"
+"35% reduced Elemental Damage","원소 피해 35% 감소"
+"8% increased Attack and Cast Speed","공격 및 시전 속도 8% 증가"
+"15% increased Effect of Impales inflicted by Hits that also inflict Bleeding","명중 시 또는 명중으로 출혈 유발 시 꿰뚫기 효과 15% 증가"
+"30% increased Evasion Rating and Armour","회피 및 방어도 30% 증가"
+"Non-Curse Aura Skills have 20% increased Duration","비-저주 오라 스킬의 지속시간 20% 증가"
+"You and nearby Allies Regenerate 1.00% of Life per second","자신 및 주변 동료들이 1초마다 생명력의 1.00% 재생"
+"100% increased Mana Reservation Efficiency of Banner Skills","깃발 스킬의 마나 점유 효율 100% 증가"
+"Hatred has 50% increased Mana Reservation Efficiency","증오의 마나 점유 효율 50% 증가"
+"Auras from your Skills have 8% increased Effect on you for
+each Herald affecting you, up to 40%","자신에게 영향을 주는 전령 하나당
+자신의 오라 스킬이 자신에게 미치는 효과 8% 증가, 최대 40% 증가"
+"Pride has 50% increased Mana Reservation Efficiency","자부심의 마나 점유 효율 50% 증가"
+"Wrath has 50% increased Mana Reservation Efficiency","진노의 마나 점유 효율 50% 증가"
+"Anger has 50% increased Mana Reservation Efficiency","분노의 마나 점유 효율 50% 증가"
+"20% increased Duration of Fire Ailments","화염 상태 이상 지속시간 20% 증가"
+"Zealotry has 50% increased Mana Reservation Efficiency","열광의 마나 점유 효율 50% 증가"
+"8% reduced Enemy Stun Threshold","적 기절 한계치 8% 감소"
+"Your Critical Strikes have a 5% chance to deal Double Damage","치명타 시 5%의 확률로 2배의 피해를 줌"
+"10% chance to gain Unholy Might for 4 seconds on Critical Strike","치명타 명중 시 10%의 확률로 4초 동안 불경한 힘 획득"
+"+30% to Critical Strike Multiplier if you've taken a Savage Hit Recently","최근 4초 이내 야만적인 타격을 받은 경우 치명타 피해 배율 +30%"
+"+10% to Damage over Time Multiplier for Ignite from Critical Strikes","치명타로 주는 점화 지속 피해 배율 +10%"
+"20% increased Effect of non-Damaging Ailments you inflict with Critical Strikes","치명타로 유발한 비-피해 상태 이상 효과 20% 증가"
+"5% increased Movement Speed if you've dealt a Critical Strike Recently","최근 4초 이내 치명타 명중 시 이동 속도 5% 증가"
+"25% increased Area of Effect if you've Killed at least 5 Enemies Recently","최근 4초 이내 적을 5명 이상 처치한 경우 효과 범위 25% 증가"
+"3% increased Area of Effect per Power Charge, up to a maximum of 50%","권능 충전 하나당 효과 범위 3% 증가, 최대 50%"
+"Area Skills have 10% chance to Knock Enemies Back on Hit","범위 스킬 명중 시 10%의 확률로 적을 밀어냄"
+"20% increased Area Damage while wielding a Two Handed Melee Weapon","양손 근접 무기 장착 시 범위 피해 20% 증가"
+"15% increased Area of Effect while wielding a Two Handed Melee Weapon","양손 근접 무기 장착 시 효과 범위 15% 증가"
+"10% increased Attack and Cast Speed if you've summoned a Totem Recently","최근 4초 이내 토템이 소환된 경우 공격 및 시전 속도 10% 증가"
+"25% increased Totem Placement range","토템 설치 범위 25% 증가"
+"30% increased Totem Damage if you haven't Summoned a Totem in the past 2 seconds","지난 2초 이내에 토템을 소환하지 않은 경우 토템 피해 30% 증가"
+"Totems gain +25% to Chaos Resistance","토템의 카오스 저항 +25%"
+"Totems Hinder Enemies near them when Summoned","토템이 소환될 때 근처의 적 이동 방해"
+"You have Onslaught if you've Summoned a Totem Recently","최근 4초 이내 토템이 소환된 경우 맹공 획득"
+"30% increased Effect of Buffs your Ancestor Totems grant while Active","활성화한 선대의 토템이 주는 버프 효과 30% 증가"
+"Totems' Action Speed cannot be modified to below base value","토템의 동작 속도가 기본 수치 밑으로 내려가지 않음"
+"Gain Arcane Surge when you Summon a Totem","토템 1개 소환 시 비전 쇄도 획득"
+"Spells cast by Totems deal 25% increased Damage","토템의 주문 시전 피해 25% 증가"
+"Regenerate 1.5% of Life per second while Channelling","집중 유지하는 동안 1초마다 생명력의 1.5% 재생"
+"50% increased Effect of Infusion","주입 효과 50% 증가"
+"5% increased Movement Speed while you have Infusion","주입 상태에서 이동 속도 5% 증가"
+"50% chance to Avoid being Stunned while Channelling","집중 유지하는 동안 50%의 확률로 기절 회피"
+"Channelling Skills deal 25% increased Damage","집중 유지 스킬로 주는 피해 25% 증가"
+"25% chance to gain an Endurance Charge each second while Channelling","집중 유지하는 동안 1초마다 25%의 확률로 인내 충전 획득"
+"30% increased Critical Strike Chance while Channelling","집중 유지하는 동안 치명타 확률 30% 증가"
+"+20% to Critical Strike Multiplier if you've been Channelling for at least 1 second","1초 이상 집중 유지한 경우 치명타 피해 배율 +20%"
+"+3% Chance to Block Attack Damage while Channelling","집중 유지하는 동안 공격 피해를 막아낼 확률 +3%"
+"+3% Chance to Block Spell Damage while Channelling","집중 유지하는 동안 주문 피해를 막아낼 확률 +3%"
+"8% increased Attack and Cast Speed while Channelling","집중 유지하는 동안 공격 및 시전 속도 8% 증가"
+"Remove a Curse after Channelling for 2 seconds","2초 동안 집중 유지 후 저주 1개 제거"
+"5% increased Attack and Cast Speed while Channelling","집중 유지하는 동안 공격 및 시전 속도 5% 증가"
+"Channelling Skills deal 20% increased Damage","집중 유지 스킬로 주는 피해 20% 증가"
+"Gain Arcane Surge after Channelling for 1 second","1초 동안 집중 유지 후 비전 쇄도 획득"
+"25% increased Life Recovery from Flasks","플라스크로 회복하는 생명력 25% 증가"
+"5% increased Attack and Cast Speed during any Flask Effect","아무 플라스크나 효과를 받는 동안 공격 및 시전 속도 5% 증가"
+"Gain Alchemist's Genius when you use a Flask","플라스크 사용 시 연금술사의 천재성 획득"
+"10% increased Movement Speed while under no Flask Effects","플라스크 효과를 받지 않는 동안 이동 속도 10% 증가"
+"Remove Bleeding when you use a Life Flask","생명력 플라스크 사용 시 출혈 제거"
+"20% increased Damage during any Flask Effect","아무 플라스크나 효과를 받는 동안 피해 20% 증가"
+"Regenerate 2% of Life per second during any Flask Effect","아무 플라스크나 효과를 받는 동안 1초마다 생명력의 2% 재생"
+"40% reduced Effect of Curses on you during Effect of any Mana Flask","아무 마나 플라스크나 효과를 받는 동안 플레이어에게 적용되는 저주 효과 40% 감소"
+"40% reduced Effect of Non-Damaging Ailments on you during Effect of any Life Flask","아무 생명력 플라스크나 효과를 받는 동안 플레이어에게 적용되는 비-피해 상태 이상 효과 40% 감소"
+"Exerted Attacks deal 25% increased Damage","전력 공격이 주는 피해 25% 증가"
+"Warcries have 5% Chance to grant an Endurance, Frenzy or Power Charge per Power","함성 사용 시 5%의 확률로 위세 하나당 인내, 격분 또는 권능 충전 1개 획득"
+"Exerted Attacks deal 30% increased Damage","전력 공격이 주는 피해 30% 증가"
+"Enemies Taunted by your Warcries are Intimidated","플레이어가 함성으로 도발한 적은 위협에 걸림"
+"When you Warcry, you and nearby Allies gain Onslaught for 4 seconds","함성 사용 시 자신 및 주변 동료들이 4초 동안 맹공 획득"
+"40% increased Critical Strike Chance against Taunted Enemies","도발된 적에 대한 치명타 확률 40% 증가"
+"+10% to Critical Strike Multiplier against Taunted Enemies","도발된 적에게 주는 치명타 피해 배율 +10%"
+"Gain 25% increased Armour per 5 Power for 8 seconds when you Warcry, up to a maximum of 100%","함성 사용 시 8초 동안 위세 5당 방어도 25% 증가, 최대 100% 증가"
+"Exerted Attacks have 8% chance to deal Double Damage","전력 공격이 8%의 확률로 2배의 피해를 줌"
+"Attacks with Axes or Swords grant 1 Rage on Hit, no more than once every second","도끼나 검 공격 명중 시 격노 1 획득, 1초마다 최대 1번 획득"
+"Axe or Sword Attacks deal 15% increased Damage with Ailments","도끼나 검 공격으로 주는 상태 이상 피해 15% 증가"
+"10% chance to Impale Enemies on Hit with Axes or Swords","도끼나 검 명중 시 10%의 확률로 적 꿰뚫음"
+"15% increased Physical Damage with Axes or Swords","도끼나 검 사용 시 물리 피해 15% 증가"
+"Axe or Sword Attacks deal 20% increased Damage with Ailments","도끼나 검 공격으로 주는 상태 이상 피해 20% 증가"
+"20% increased Physical Damage with Axes or Swords","도끼나 검 사용 시 물리 피해 20% 증가"
+"+5% to Physical Damage over Time Multiplier while wielding an Axe or Sword","도끼나 검 장착 시 지속 물리 피해 배율 +5%"
+"30% increased Damage with Maces, Sceptres or Staves","철퇴, 셉터나 지팡이 사용 시 피해 30% 증가"
+"Melee Hits with a Maces, Sceptres or Staves Fortify for 6 seconds","철퇴, 셉터, 지팡이로 근접 명중 시 6초 동안 방어 상승"
+"Mace, Sceptre or Staff Attacks deal 20% increased Damage with Hits and Ailments","철퇴나 셉터, 지팡이 공격으로 주는 적중 및 상태 이상 피해 20% 증가"
+"While stationary, gain 10% increased Area of Effect every second, up to a maximum of 50%","정지 상태일 때 1초마다 효과 범위 10% 증가, 최대 50%"
+"Mace, Sceptre or Staff Attacks deal 30% increased Damage with Hits and Ailments","철퇴나 셉터, 지팡이 공격으로 주는 적중 및 상태 이상 피해 30% 증가"
+"4% chance to deal Double Damage while wielding a Mace, Sceptre or Staff","철퇴나 셉터, 지팡이 장착 시 4%의 확률로 2배의 피해를 줌"
+"+15% to Critical Strike Multiplier with Claws or Daggers","클로나 단검 사용 시 치명타 피해 배율 +15%"
+"10% chance to gain a Power Charge on Non-Critical Strike with a Claw or Dagger","클로나 단검을 장착하는 동안 비-치명타 명중 시 10% 확률로 권능 충전 획득"
+"Attack Skills fire an additional Projectile while wielding a Claw or Dagger","클로나 단검 장착 시 공격 스킬이 투사체 1개 추가 발사"
+"20% increased Projectile Attack Damage with Claws or Daggers","클로나 단검 사용 시 투사체 공격 피해 20% 증가"
+"Enemies Poisoned by you cannot Regenerate Life","플레이어가 중독시킨 적은 생명력 재생 불가"
+"+6% to Damage over Time Multiplier for Poison while wielding a Claw or Dagger","클로나 단검을 장착하는 동안 독 지속 피해 배율 +6%"
+"Arrows gain Critical Strike Chance as they travel farther, up to 100% increased Critical Strike Chance","화살의 이동 거리가 멀어질수록 치명타 확률이 최대 100% 증가"
+"Arrows gain Damage as they travel farther, dealing up to 50% increased Damage with Hits to targets","화살의 이동 거리가 멀어질수록 대상 명중 시 피해 최대 50% 증가"
+"Bow Skills have +6% to Damage over Time Multiplier","활 스킬의 지속 피해 배율 +6%"
+"Bow Skills have 10% increased Skill Effect Duration","활 스킬의 스킬 효과 지속시간 10% 증가"
+"10% increased Duration of Ailments inflicted while wielding a Bow","활 장착 시 유발되는 상태 이상 지속시간 10% 증가"
+"Bow Skills have 25% increased Area of Effect","활 스킬의 효과 범위 25% 증가"
+"Enemies Killed with Wand Hits have a 10% chance to Explode, dealing a quarter of their Life as Chaos Damage","마법봉 공격에 적중되어 사망한 적이 10%의 확률로 폭발하여, 생명력의 1/4을 카오스 피해로 줌"
+"Gain 10% of Wand Physical Damage as Extra Chaos Damage","마법봉 물리 피해의 10%를 추가 카오스 피해로 획득"
+"50% increased Critical Strike Chance with Wands","마법봉 사용 시 치명타 확률 50% 증가"
+"35% increased Damage with Wands if you've dealt a Critical Strike Recently","최근 4초 이내 치명타 명중 시 마법봉 피해 35% 증가"
+"Gain 10% of Wand Physical Damage as Extra Lightning Damage","마법봉 물리 피해의 10%를 번개 피해로 추가"
+"25% of Wand Physical Damage converted to Lightning Damage","마법봉 물리 피해의 25%를 번개 피해로 전환"
+"Attacks with Two Handed Weapons deal 25% increased Damage with Hits and Ailments","양손 무기 공격으로 주는 적중 및 상태 이상 피해 25% 증가"
+"15% increased Area of Effect if you've Stunned an Enemy with a Two Handed Melee Weapon Recently","최근 4초 이내 양손 근접 무기로 적을 기절시킨 경우 효과 범위 15% 증가"
+"10% increased Attack Speed if you have at least 600 Strength","힘이 600 이상인 경우 공격 속도 10% 증가"
+"5% chance to deal Double Damage if you've dealt a Critical Strike with a Two Handed Melee Weapon Recently","최근 4초 이내 양손 근접 무기로 치명타 명중 시 5%의 확률로 2배의 피해를 줌"
+"15% increased Accuracy Rating with Two Handed Melee Weapons","양손 근접 무기 사용 시 정확도 15% 증가"
+"25% increased Critical Strike Chance with Two Handed Melee Weapons","양손 근접 무기 사용 시 치명타 확률 25% 증가"
+"+15 to Dexterity and Intelligence","민첩 및 지능 +15"
+"40% increased Damage with Hits and Ailments against Unique Enemies","고유 적에 대한 적중 및 상태 이상 피해 40% 증가"
+"25% chance to Intimidate nearby Enemies for 4 seconds on Melee Kill","근접 처치 시 25%의 확률로 4초 동안 주변의 적 위협"
+"10% increased Attack Speed if you've Hit with your Main Hand Weapon Recently","최근 4초 이내 주 무기로 명중 시 공격 속도 10% 증가"
+"10% increased Movement Speed if you've Hit with your Off Hand Weapon Recently","최근 4초 이내 보조 장비로 명중 시 이동 속도 10% 증가"
+"5% increased Attack Speed while Dual Wielding","쌍수 장착 시 공격 속도 5% 증가"
+"5% chance to gain a Frenzy Charge on Kill while Dual Wielding","쌍수 사용 시 적을 처치하면 5%의 확률로 격분 충전 1개 획득"
+"8% increased Attack Speed while Dual Wielding","쌍수 장착 시 공격 속도 8% 증가"
+"16% increased Accuracy Rating while Dual Wielding","쌍수 장착 시 정확도 16% 증가"
+"32% increased Damage if you've used a Travel Skill Recently","최근 4초 이내 이동 전용 스킬을 사용한 경우 피해 32% 증가"
+"30% increased Attack Critical Strike Chance while Dual Wielding","쌍수 장착 시 공격 치명타 확률 30% 증가"
+"60% increased Main Hand Attack Damage while wielding two different Weapon Types","다른 유형의 무기 2개 장착 시 주 무기 공격 피해 60% 증가"
+"30% increased Off Hand Attack Speed while wielding two different Weapon Types","다른 유형의 무기 2개 장착 시 보조 장비 공격 속도 30% 증가"
+"40% increased Attack Damage against Maimed Enemies","힘줄 절단된 적에 대한 공격 피해 40% 증가"
+"Attacks have 10% chance to Maim on Hit","공격 명중 시 10%의 확률로 힘줄 절단"
+"30% increased Attack Damage","공격 피해 30% 증가"
+"30% increased Damage with Ailments from Attack Skills","공격 스킬의 상태 이상 피해 30% 증가"
+"20% increased Damage with Ailments from Attack Skills","공격 스킬의 상태 이상 피해 20% 증가"
+"30% increased Elemental Damage with Attack Skills","공격 스킬의 원소 피해 30% 증가"
+"15% increased Effect of Non-Damaging Ailments","비-피해 상태 이상 효과 15% 증가"
+"Enemies Killed with Attack Hits have a 15% chance to Explode, dealing a tenth of their Life as Physical Damage","공격에 적중되어 사망한 적이 15%의 확률로 폭발하여, 생명력의 1/10을 물리 피해로 줌"
+"20% increased Damage while Leeching","흡수하는 동안 피해 20% 증가"
+"25% increased Attack Damage when on Full Life","생명력이 최대일 때 공격 피해 25% 증가"
+"Skills Supported by Unleash have 30% increased Seal gain frequency","촉발 보조 효과가 적용되는 스킬의 봉인 획득 빈도 30% 증가"
+"25% increased Spell Damage","주문 피해 25% 증가"
+"+6% Chance to Block Spell Damage if you've Cast a Spell Recently","최근 4초 이내 주문을 시전한 경우 주문 피해를 막아낼 확률 +6%"
+"30% increased Effect of Arcane Surge on you","자신에게 적용되는 비전 쇄도 효과 30% 증가"
+"10% chance to gain Arcane Surge when you Hit a Unique enemy","고유 적 명중 시 10%의 확률로 비전 쇄도 획득"
+"35% chance to Avoid interruption from Stuns while Casting","시전하는 동안 35%의 확률로 기절 방해 회피"
+"30% increased Spell Damage","주문 피해 30% 증가"
+"8% chance to Knock Enemies Back on Hit with Spell Damage","주문 피해 명중 시 8%의 확률로 적을 밀어냄"
+"25% increased Spell Damage while on Full Energy Shield","에너지 보호막이 최대일 때 주문 피해 25% 증가"
+"10% chance to Hinder Enemies on Hit with Spells","주문 명중 시 10%의 확률로 적 이동 방해"
+"40% increased Damage while Leeching Energy Shield","에너지 보호막을 흡수하는 동안 피해 40% 증가"
+"5% increased Attack and Cast Speed while Leeching Energy Shield","에너지 보호막을 흡수하는 동안 공격 및 시전 속도 5% 증가"
+"Regenerate 1% of Energy Shield per second if you've Cursed an Enemy Recently","최근 4초 이내 적 저주 시 1초마다 에너지 보호막의 1% 재생"
+"15% increased Elemental Damage if you've Chilled an Enemy Recently","최근 4초 이내 적을 냉각시킨 경우 원소 피해 15% 증가"
+"20% increased Elemental Damage if you've Ignited an Enemy Recently","최근 4초 이내 적을 점화시킨 경우 원소 피해 20% 증가"
+"25% increased Elemental Damage if you've Shocked an Enemy Recently","최근 4초 이내 적을 감전시킨 경우 원소 피해 25% 증가"
+"Cold Skills have a 25% chance to apply Cold Exposure on Hit","냉기 스킬 명중 시 25%의 확률로 냉기 노출 적용"
+"Fire Skills have a 25% chance to apply Fire Exposure on Hit","화염 스킬 명중 시 25%의 확률로 화염 노출 적용"
+"Lightning Skills have a 25% chance to apply Lightning Exposure on Hit","번개 스킬 명중 시 25%의 확률로 번개 노출 적용"
+"0.2% of Elemental Damage Leeched as Life","원소 피해의 0.2%를 생명력으로 흡수"
+"25% increased Elemental Damage","원소 피해 25% 증가"
+"10% chance to Blind nearby Enemies when you use an Elemental Skill","원소 스킬 사용 시 10%의 확률로 주변의 적 실명 유발"
+"Nearby Enemies have Fire Exposure","주변의 적 화염 노출 유발"
+"35% increased Fire Damage","화염 피해 35% 증가"
+"10% chance to create a Smoke Cloud on Kill","처치 시 10%의 확률로 연막 생성"
+"Ignited Enemies Killed by your Hits are destroyed","플레이어에게 피격되어 점화가 유발된 적이 사망 시 파괴됨"
+"Gain 8% of Lightning Damage as Extra Cold Damage against Chilled Enemies","냉각된 적에게 주는 번개 피해의 8%를 추가 냉기 피해로 획득"
+"Damage Penetrates 8% Lightning Resistance","피해가 번개 저항 8% 관통"
+"0.5% of Lightning Damage Leeched as Energy Shield","번개 피해의 0.5%를 에너지 보호막으로 흡수"
+"Lightning Skills have 10% reduced Enemy Stun Threshold","번개 스킬의 적 기절 한계치 10% 감소"
+"Lightning Damage with Non-Critical Strikes is Lucky","비-치명타로 주는 번개 피해에 행운 적용"
+"Damage Penetrates 10% Cold Resistance against Chilled Enemies","냉각된 적에게 주는 피해가 10%의 냉기 저항 관통"
+"1% increased Cold Damage per 25 Dexterity","민첩 25당 냉기 피해 1% 증가"
+"1% increased Cold Damage per 25 Intelligence","지능 25당 냉기 피해 1% 증가"
+"1% increased Cold Damage per 25 Strength","힘 25당 냉기 피해 1% 증가"
+"Recover 2% of Life on Killing a Chilled Enemy","냉각된 적 처치 시 생명력의 2% 회복"
+"Chaos Spells have 10% chance to Hinder Enemies on Hit","카오스 주문 명중 시 10%의 확률로 적 이동 방해"
+"Chaos Skills ignore interruption from Stuns","카오스 스킬이 기절 방해 무시"
+"Enemies you Kill have a 10% chance to Explode, dealing a quarter of their maximum Life as Chaos Damage","자신이 처치한 적이 10%의 확률로 폭발하여, 생명력 최대치의 1/4을 카오스 피해로 줌"
+"2% increased Chaos Damage per 100 maximum Mana, up to a maximum of 80%","최대 마나 100당 카오스 피해 2% 증가, 최대 80%"
+"10% increased Attack and Cast Speed","공격 및 시전 속도 10% 증가"
+"Minions have 5% chance to deal Double Damage while they are on Full Life","소환수가 최대 생명력일 때 5%의 확률로 2배의 피해를 줌"
+"Minions have 20% chance to Ignite","소환수가 20%의 확률로 점화 유발"
+"Minions deal 20% increased Damage against Ignited Enemies","소환수가 점화된 적에게 주는 피해 20% 증가"
+"Minions gain 6% of Physical Damage as Extra Fire Damage","소환수가 물리 피해의 6%를 추가 화염 피해로 획득"
+"Minions have a 12% chance to Impale on Hit with Attacks","공격 명중 시 소환수가 12%의 확률로 적 꿰뚫음"
+"Minions created Recently have 10% increased Attack and Cast Speed","최근 4초 이내 생성한 소환수의 공격 및 시전 속도 10% 증가"
+"Minions created Recently have 30% increased Movement Speed","최근 4초 이내 생성한 소환수의 이동 속도 30% 증가"
+"Summoned Skeletons have 10% chance to Wither Enemies for 2 seconds on Hit","소환된 해골이 명중 시 10%의 확률로 2초 동안 적을 위축"
+"Summoned Skeletons have 30% of Physical Damage Converted to Chaos Damage","소환된 해골이 보유한 물리 피해의 30%를 카오스 피해로 전환"
+"Minions have 25% increased maximum Life","소환수의 최대 생명력 25% 증가"
+"Raised Zombies have 5% chance to Taunt Enemies on Hit","명중 시 소환한 좀비가 5%의 확률로 적 도발"
+"Minions have 30% increased Critical Strike Chance","소환수의 치명타 확률 30% 증가"
+"Minions have +15% to Critical Strike Multiplier","소환수의 치명타 피해 배율 +15%"
+"10% increased Damage per Summoned Golem","소환된 골렘 하나당 피해 10% 증가"
+"Golems have 25% increased Maximum Life","골렘의 최대 생명력 25% 증가"
+"Ignites you inflict spread to other Enemies within a Radius of 15","플레이어가 유발한 점화가 반경 15 이내의 다른 적에게 확산"
+"Enemies Ignited by you have -5% to Fire Resistance","플레이어에 의해 점화된 적의 화염 저항 -5%"
+"25% increased Burning Damage","화상 피해 25% 증가"
+"Cannot be Chilled while Burning","화상 상태에서 냉각 면역"
+"5% chance to Cover Enemies in Ash on Hit while you are Burning","화상 상태에서 명중 시 5%의 확률로 적을 재로 덮음"
+"2% of Attack Damage Leeched as Life against Bleeding Enemies","출혈 중인 적에 대한 공격 피해의 2%를 생명력으로 흡수"
+"35% increased Damage with Bleeding you inflict on Maimed Enemies","힘줄 절단된 적에게 주는 출혈 피해 35% 증가"
+"+6% to Physical Damage over Time Multiplier if you've Spent Life Recently","최근 4초 이내 생명력을 소모한 경우 지속 물리 피해 배율 +6%"
+"+6% to Physical Damage over Time Multiplier if you've dealt a Critical Strike Recently","최근 4초 이내 치명타 명중 시 지속 물리 피해 배율 +6%"
+"20% chance to Poison on Hit with Spell Damage","주문 피해 명중 시 20%의 확률로 중독 유발"
+"Poisons you inflict on non-Poisoned Enemies deal 300% increased Damage","중독되지 않은 적에게 중독을 유발하는 독 피해 300% 증가"
+"15% increased Poison Duration","중독 지속시간 15% 증가"
+"15% increased Bleeding Duration","출혈 지속시간 15% 증가"
+"+6% to Damage over Time Multiplier for Bleeding you inflict on Poisoned Enemies","중독된 적에게 주는 출혈 지속 피해 배율 +6%"
+"+6% to Damage over Time Multiplier for Poison you inflict on Bleeding Enemies","출혈 중인 적 공격 시 독 지속 피해 배율 +6%"
+"50% chance to inflict Withered for two seconds on Hit if there are 5 or fewer Withered Debuffs on Enemy","적에게 부여된 위축 디버프가 5 이하인 경우 명중 시 50%의 확률로 2초 동안 위축 유발"
+"20% increased Damage with Ailments","상태 이상 피해 20% 증가"
+"Damaging Ailments deal damage 5% faster","상태 이상 피해 5%만큼 가속"
+"+10% to Damage over Time Multiplier for Ailments from Critical Strikes","치명타로 주는 상태 이상 지속 피해 배율 +10%"
+"24% increased Damage over Time","지속 피해 24% 증가"
+"+30% Chaos Resistance against Damage Over Time","지속 피해 대응 카오스 저항 +30%"
+"Recover 1% of Life on Kill","처치 시 생명력의 1% 회복"
+"Recover 1% of Energy Shield on Kill","처치 시 에너지 보호막의 1% 회복"
+"Regenerate 2% of Energy Shield per second if you've Killed an Enemy Recently","최근 4초 이내 적 처치 시 1초마다 에너지 보호막의 2% 재생"
+"25% increased Damage over Time","지속 피해 25% 증가"
+"20% increased Life and Mana Recovery from Flasks","플라스크로 얻는 생명력과 마나 회복 20% 증가"
+"20% increased Damage with Hits and Ailments against Enemies affected by Ailments","상태 이상에 영향을 받는 적에 대한 적중 및 상태 이상 피해 20% 증가"
+"25% increased Effect of Cold Ailments you inflict on Shocked Enemies","감전된 적에게 유발하는 냉기 상태 이상의 효과 25% 증가"
+"25% increased Effect of Lightning Ailments you inflict on Chilled Enemies","냉각된 적에게 유발하는 번개 상태 이상의 효과 25% 증가"
+"30% increased Mana Regeneration Rate if you have Frozen an Enemy Recently","최근 4초 이내 적을 동결시킨 경우 마나 재생 속도 30% 증가"
+"30% increased Mana Regeneration Rate if you have Shocked an Enemy Recently","최근 4초 이내 적을 감전시킨 경우 마나 재생 속도 30% 증가"
+"Nearby Enemies are Chilled","주변의 적 냉각 유발"
+"Freezes you inflict spread to other Enemies within a Radius of 12","플레이어가 유발한 동결이 반경 12 이내의 다른 적에게 확산"
+"Your Critical Strikes Knock Back Shocked Enemies","치명타 시 감전된 적을 밀어냄"
+"10% chance to gain a Power Charge when you Shock a Chilled Enemy","냉각된 적 감전 시 10%의 확률로 권능 충전 획득"
+"25% increased Cold Damage with Hits against Shocked Enemies","감전된 적 명중 시 냉기 피해 25% 증가"
+"25% increased Lightning Damage with Hits against Chilled Enemies","냉각된 적 명중 시 번개 피해 25% 증가"
+"40% increased Effect of Lightning Ailments","번개 상태 이상 효과 40% 증가"
+"Enemies you Curse take 6% increased Damage","저주를 건 적이 받는 피해 6% 증가"
+"Hexes you inflict have +3 to maximum Doom","플레이어가 유발하는 사술의 최대 멸망 +3"
+"25% increased Area of Effect of Curse Aura Skills","저주 오라 스킬의 효과 범위 25% 증가"
+"15% increased Mana Reservation Efficiency of Curse Aura Skills","저주 오라 스킬의 마나 점유 효율 15% 증가"
+"20% increased Enfeeble Curse Effect","쇠약화 저주 효과 20% 증가"
+"Curse Skills have 8% increased Cast Speed","저주 스킬의 시전 속도 8% 증가"
+"Enemies Cursed by you have Malediction if 33% of Curse Duration expired","플레이어가 저주한 적의 저주 지속시간이 33% 경과하면 해당 적에게 악담 부여"
+"Enemies you Curse are Unnerved","플레이어가 저주한 적은 낙담에 걸림"
+"You have Culling Strike against Cursed Enemies","저주받은 적에게 마무리 타격 가능"
+"Nearby Enemies have Cold Exposure while you are affected by Herald of Ice","자신이 얼음의 전령의 영향을 받는 동안 주변의 적에게 냉기 노출 유발"
+"Nearby Enemies have Fire Exposure while you are affected by Herald of Ash","자신이 재의 전령의 영향을 받는 동안 주변의 적에게 화염 노출 유발"
+"Nearby Enemies have Lightning Exposure while you are affected by Herald of Thunder","자신이 천둥의 전령의 영향을 받는 동안 주변의 적에게 번개 노출 유발"
+"5% increased Damage for each Herald affecting you","자신에게 영향을 주는 전령 하나당 피해 5% 증가"
+"20% increased Damage while affected by a Herald","전령의 영향을 받는 동안 피해 20% 증가"
+"Minions deal 35% increased Damage while you are affected by a Herald","전령의 영향을 받는 동안 소환수가 주는 피해 35% 증가"
+"Herald Skills deal 40% increased Damage","전령 스킬로 주는 피해 40% 증가"
+"Herald Skills deal 20% increased Damage","전령 스킬로 주는 피해 20% 증가"
+"10% chance to Freeze, Shock and Ignite while affected by a Herald","전령의 영향을 받는 동안 10%의 확률로 동결, 감전 및 점화 유발"
+"25% increased Elemental Damage while affected by a Herald","전령의 영향을 받는 동안 원소 피해 25% 증가"
+"30% increased Damage over Time while affected by a Herald","전령의 영향을 받는 동안 지속 피해 30% 증가"
+"Herald Skills deal 50% increased Damage over Time","전령 스킬로 주는 지속 피해 50% 증가"
+"+1% to Critical Strike Chance of Herald Skills","전령 스킬의 치명타 확률 +1%"
+"+15% to Critical Strike Multiplier if you dealt a Critical Strike with a Herald Skill Recently","최근 4초 이내 전령 스킬로 치명타 명중 시 치명타 피해 배율 +15%"
+"Minions deal 20% increased Damage while you are affected by a Herald","전령의 영향을 받는 동안 소환수가 주는 피해 20% 증가"
+"Minions have 10% increased Movement Speed for each Herald affecting you","자신에게 영향을 주는 전령 하나당 소환수의 이동 속도 10% 증가"
+"+5 to Maximum Virulence","병독성 최대치 +5"
+"Summoned Sentinels have 25% increased Cooldown Recovery Rate","소환된 파수꾼의 재사용 대기시간 회복 속도 25% 증가"
+"Minions created Recently cannot be Damaged","최근 4초 이내 생성한 소환수가 피해를 받지 않음"
+"Regenerate 2% of Life per second if a Minion has Died Recently","최근 4초 이내 소환수가 사망하면 1초마다 생명력의 2% 재생"
+"Minions Recover 4% of Life on Minion Death","소환수 사망 시 소환수가 생명력의 4% 회복"
+"Minions Leech 0.4% of Damage as Life","소환수가 피해의 0.4%를 생명력으로 흡수"
+"Minions have 10% chance to Knock Enemies Back on Hit with Attacks","공격 명중 시 소환수가 10%의 확률로 적을 밀어냄"
+"Projectiles deal 15% increased Damage with Hits and Ailments for each remaining Chain","투사체가 남은 연쇄 하나당 적중 및 상태 이상으로 주는 피해 15% 증가"
+"35% increased Projectile Damage","투사체 피해 35% 증가"
+"10% chance to Taunt Enemies on Projectile Hit","투사체 명중 시 10%의 확률로 적 도발"
+"25% increased Projectile Damage","투사체 피해 25% 증가"
+"35% increased Projectile Damage with Hits against nearby Enemies","주변 적 명중 시 투사체 피해 35% 증가"
+"Brand Recall grants 20% increased Brand Attachment range to recalled Brands","낙인 소환 시 소환된 낙인의 부착 범위 20% 증가"
+"Brand Recall has 4% increased Cooldown Recovery Rate per Brand, up to a maximum of 40%","낙인 하나당 낙인 소환의 재사용 대기시간 회복 속도 4% 증가, 최대 40% 증가"
+"25% increased Brand Damage","낙인 피해 25% 증가"
+"Unattached Brands gain 20% increased Brand Attachment Range per second, up to 100%","부착되지 않은 낙인의 부착 범위 1초마다 20% 증가, 최대 100% 증가"
+"8% increased Cast Speed with Brand Skills","낙인 스킬 시전 속도 8% 증가"
+"Skills which create Brands have 35% chance to create an additional Brand","낙인을 생성하는 스킬은 35% 확률로 낙인 1개 추가 생성"
+"Enemies take 3% increased Damage for each of your Brands Attached to them","낙인이 부착된 적이 부착된 낙인 하나당 받는 피해 3% 증가"
+"Brands have 25% increased Area of Effect if 50% of Attached Duration expired","부착 지속시간의 50%가 경과하면 낙인의 효과 범위 25% 증가"
+"25% increased Trap Damage","덫 피해 25% 증가"
+"Skills used by Traps have 15% increased Area of Effect","덫에 의해 사용된 스킬 효과 범위 15% 증가"
+"5% increased Movement Speed if you've thrown a Trap or Mine Recently","최근 4초 이내 덫이나 지뢰를 투척한 경우, 이동 속도 5% 증가"
+"10% chance to throw up to 1 additional Trap or Mine","10%의 확률로 덫 또는 지뢰 최대 1개 추가 투척"
+"Gain Arcane Surge when your Mine is Detonated targeting an Enemy","플레이어의 지뢰가 적을 대상으로 폭발하면 비전 쇄도 획득"
+"Gain Arcane Surge when your Trap is Triggered by an Enemy","자신의 덫이 적에 의해 발동되면 비전 쇄도 획득"
+"Trap Damage Penetrates 4% Elemental Resistances","덫 피해가 4%의 원소 저항 관통"
+"Mine Damage Penetrates 4% Elemental Resistances","지뢰 피해가 4%의 원소 저항 관통"
+"15% increased Mine Damage","지뢰 피해 15% 증가"
+"Every 4 seconds, Regenerate 10% of Life over one second","4초마다 1초에 걸쳐 생명력의 10% 재생"
+"20% increased Armour while stationary","정지 상태일 때 방어도 20% 증가"
+"6% increased Attack Speed while Leeching","흡수하는 동안 공격 속도 6% 증가"
+"5% increased Strength","힘 5% 증가"
+"80% increased Mana Regeneration Rate while stationary","정지 상태일 때 마나 재생 속도 80% 증가"
+"25% chance to gain a Power Charge when you use a Mana Flask","마나 플라스크 사용 시 25%의 확률로 권능 충전 획득"
+"+30 to maximum Mana","마나 최대치 +30"
+"5% increased Intelligence","지능 5% 증가"
+"+1 Armour per 10 Unreserved Maximum Mana","점유하지 않은 최대 마나 10당 방어도 +1"
+"Regenerate 3.00% of Energy Shield per second while stationary","정지 상태일 때 1초마다 에너지 보호막의 3.00% 재생"
+"+70 to maximum Energy Shield","에너지 보호막 최대치 +70"
+"Gain 5% of Maximum Mana as Extra Maximum Energy Shield","최대 마나의 5%를 추가 에너지 보호막 최대치로 획득"
+"5% faster start of Energy Shield Recharge","에너지 보호막 재충전 시작 속도 5% 가속"
+"Gain 10% of Maximum Life as Extra Armour","최대 생명력의 10%를 추가 방어도로 획득"
+"+20% to Fire Resistance","화염 저항 +20%"
+"15% chance to Defend with 200% of Armour","15% 확률로 200%의 방어도로 방어"
+"10% chance to Blind Enemies on Hit","명중 시 10%의 확률로 적 실명 유발"
+"30% chance to Avoid being Impaled","30%의 확률로 꿰뚫림 회피"
+"25% reduced Elemental Ailment Duration on you","플레이어에게 적용되는 원소 상태 이상 지속시간 25% 감소"
+"25% reduced Effect of Chill and Shock on you","플레이어에게 적용되는 냉각 및 감전 효과 25% 감소"
+"Regenerate 1.5% of Life per second","1초마다 생명력의 1.5% 재생"
+"+4% Chance to Block Attack Damage","공격 피해를 막아낼 확률 +4%"
+"4% Chance to Block Spell Damage","4%의 확률로 주문 피해를 막아냄"
+"Enemies Taunted by you take 6% increased Damage","플레이어가 도발한 적이 받는 피해 6% 증가"
+"Recover 50 Life when you Block","막아낼 시 생명력 50 회복"
+"5% increased Dexterity","민첩 5% 증가"
+"+12% chance to Suppress Spell Damage while moving","이동 중 주문 피해 억제 확률 +12%"
+"+2% to maximum Fire Resistance","화염 저항 최대치 +2%"
+"You cannot be Ignited if you've been Ignited Recently","최근 4초 이내 점화에 걸린 경우 점화 면역"
+"Unaffected by Burning Ground","용암 지대의 영향을 받지 않음"
+"40% increased Stun and Block Recovery","기절 및 막기 회복 40% 증가"
+"Purity of Fire has 80% increased Mana Reservation Efficiency","불의 순수함의 마나 점유 효율 80% 증가"
+"0.4% of Fire Damage Leeched as Life","화염 피해의 0.4%를 생명력으로 흡수"
+"+2% to maximum Cold Resistance","냉기 저항 최대치 +2%"
+"You cannot be Frozen if you've been Frozen Recently","최근 4초 이내 동결된 경우 동결 면역"
+"Unaffected by Chilled Ground","얼음 지대의 영향을 받지 않음"
+"Purity of Ice has 80% increased Mana Reservation Efficiency","얼음의 순수함의 마나 점유 효율 80% 증가"
+"5% chance to Blind Enemies on Hit","명중 시 5%의 확률로 적 실명 유발"
+"+20% to Cold Resistance","냉기 저항 +20%"
+"+2% to maximum Lightning Resistance","번개 저항 최대치 +2%"
+"You cannot be Shocked if you've been Shocked Recently","최근 4초 이내 감전된 경우 감전 면역"
+"Unaffected by Shocked Ground","감전 지대의 영향을 받지 않음"
+"Purity of Lightning has 80% increased Mana Reservation Efficiency","번개의 순수함의 마나 점유 효율 80% 증가"
+"+20% to Lightning Resistance","번개 저항 +20%"
+"+3% to maximum Chaos Resistance","카오스 저항 최대치 +3%"
+"+13% to Chaos Resistance","카오스 저항 +13%"
+"Regenerate 0.6% of Energy Shield per second","1초마다 에너지 보호막 0.6% 재생"
+"Regenerate 0.3% of Mana per second","1초마다 마나의 0.3% 재생"
+"40% increased Flammability Curse Effect","인화성 저주 효과 40% 증가"
+"40% increased Frostbite Curse Effect","동상 저주 효과 40% 증가"
+"40% increased Conductivity Curse Effect","전도성 저주 효과 40% 증가"
+"40% increased Despair Curse Effect","절망의 저주 효과 40% 증가"
+"40% increased Vulnerability Curse Effect","취약성 저주 효과 40% 증가"
+"15% increased Physical Damage","물리 피해 15% 증가"
+"Discipline has 80% increased Mana Reservation Efficiency","단련의 마나 점유 효율 80% 증가"
+"Determination has 50% increased Mana Reservation Efficiency","결의의 마나 점유 효율 50% 증가"
+"Grace has 50% increased Mana Reservation Efficiency","은총의 마나 점유 효율 50% 증가"
+"Malevolence has 50% increased Mana Reservation Efficiency","악의의 마나 점유 효율 50% 증가"
+"Debuffs on you expire 10% faster","플레이어에게 적용되는 디버프가 10% 더 빠르게 만료됨"
+"Haste has 50% increased Mana Reservation Efficiency","가속의 마나 점유 효율 50% 증가"
+"Auras from your Skills have 10% increased Effect on you","자신의 오라 스킬이 자신에게 미치는 효과 10% 증가"
+"20% increased Effect of your Marks","플레이어의 징표 효과 20% 증가"
+"25% increased Damage with Hits against Enemies that are on Low Life","낮은 생명력 상태의 적 적중 시 피해 25% 증가"
+"40% increased Punishment Curse Effect","응징 저주 효과 40% 증가"
+"20% increased Temporal Chains Curse Effect","시간의 사슬 저주 효과 20% 증가"
+"40% increased Elemental Weakness Curse Effect","원소 약화 저주 효과 40% 증가"
+"30% increased Fortification Duration","방어 상승 지속시간 30% 증가"
+"20% increased Damage with Attack Skills while Fortified","방어 상승 상태에서 공격 스킬의 피해 20% 증가"
+"Fortifying Hits grant 60% increased Fortification","명중 시 적용하는 방어 상승 60% 증가"
+"12% increased Damage with Two Handed Weapons","양손 무기 피해 12% 증가"
+"12% increased Attack Damage while Dual Wielding","쌍수 장착 시 공격 피해 12% 증가"
+"12% increased Burning Damage","화상 피해 12% 증가"
+"12% increased Chaos Damage over Time","지속 카오스 피해 12% 증가"
+"12% increased Physical Damage over Time","지속 물리 피해 12% 증가"
+"12% increased Cold Damage over Time","지속 냉기 피해 12% 증가"
+"3% increased Effect of your Curses","플레이어가 시전하는 저주 효과 3% 증가"
+"Minions deal 10% increased Damage while you are affected by a Herald","전령의 영향을 받는 동안 소환수가 주는 피해 10% 증가"
+"Channelling Skills deal 12% increased Damage","집중 유지 스킬로 주는 피해 12% 증가"
+"6% increased Flask Effect Duration","플라스크 효과 지속시간 6% 증가"
+"+1% Chance to Block Attack Damage","공격 피해를 막아낼 확률 +1%"
+"1% Chance to Block Spell Damage","1%의 확률로 주문 피해를 막아냄"
+"+2% chance to Suppress Spell Damage","주문 피해 억제 확률 +2%"
+"6% increased Mana Reservation Efficiency of Skills","스킬의 마나 점유 효율 6% 증가"
