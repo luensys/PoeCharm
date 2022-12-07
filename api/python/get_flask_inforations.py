@@ -2,17 +2,23 @@ import requests
 import json
 import time
 import csv
+import cloudscraper
 
 URL = 'https://poe.game.daum.net/api/trade'
 EN_URL = 'https://www.pathofexile.com/api/trade'
-search_uri = '/search/Archnemesis'
+search_uri = '/search/Kalandra'
 item_info_uri = '/data/items'
 fetch_uri = '/fetch/'
 flask_file = '../../PoeCharm/Pob/translate_kr/Flask_tag.csv'
 result_file = '../Flask_tag.csv'
 
-def get_request(url):
-  res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
+def get_request_kr(url):
+  res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'}, verify=False)
+  return json.loads(res.text)
+
+def get_request_en(url):
+  scraper = cloudscraper.create_scraper(delay=10,   browser={'custom': 'ScraperBot/1.0',})
+  res = scraper.get(url)
   return json.loads(res.text)
 
 def post_request(url, json_data):
@@ -37,15 +43,16 @@ with open(flask_file, 'r', encoding='utf8') as csvfile:
 for kr_type in kr_types:
   query = query_base.copy()
   query['query']['type'] = kr_type
-  response = requests.post(URL + search_uri, json=query, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
+  response = requests.post(URL + search_uri, json=query, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'}, verify=False)
+  print(response)
   result = json.loads(response.text)
   items = result['result']
 
   fetchs = reshape(items, 10)
 
   for fetch in fetchs:
-    en_info = get_request(EN_URL + fetch_uri + ','.join(fetch))
-    kr_info = get_request(URL + fetch_uri + ','.join(fetch))
+    en_info = get_request_en(EN_URL + fetch_uri + ','.join(fetch))
+    kr_info = get_request_kr(URL + fetch_uri + ','.join(fetch))
     for idx, item in enumerate(en_info['result']):
       try:
         en_explicit = item['item']['extended']['mods']['explicit']
