@@ -1,12 +1,18 @@
 import requests
 import json
 import csv
+import cloudscraper
 
 URL = 'https://poe.game.daum.net/api/trade/data/items'
 EN_URL = 'https://www.pathofexile.com/api/trade/data/items'
 
-def get_request(url):
-  res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
+def get_request_kr(url):
+  res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'}, verify=False)
+  return json.loads(res.text)
+
+def get_request_en(url):
+  scraper = cloudscraper.create_scraper(delay=10,   browser={'custom': 'ScraperBot/1.0',})
+  res = scraper.get(url)
   return json.loads(res.text)
 
 translate = {}
@@ -19,8 +25,8 @@ gems = {}
 jewels = {}
 weapons = {}
 
-kr_items = get_request(URL)
-en_items = get_request(EN_URL)
+kr_items = get_request_kr(URL)
+en_items = get_request_en(EN_URL)
 
 item_ids = ['accessories', 'armour', 'flasks', 'gems', 'jewels', 'weapons']
 for idx, en_item in enumerate(en_items['result']):

@@ -3,6 +3,7 @@ import json
 import csv
 import re
 import more_itertools as mit
+import cloudscraper
 
 URL = 'https://poe.game.daum.net/api/trade/data/stats'
 EN_URL = 'https://www.pathofexile.com/api/trade/data/stats'
@@ -13,8 +14,13 @@ etcs_file = 'etcs.csv'
 temp_file = 'temp.csv'
 result_dir = '../../translator/translate_kr'
 
-def get_request(url):
-  res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
+def get_request_kr(url):
+  res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'}, verify=False)
+  return json.loads(res.text)
+
+def get_request_en(url):
+  scraper = cloudscraper.create_scraper(delay=10,   browser={'custom': 'ScraperBot/1.0',})
+  res = scraper.get(url)
   return json.loads(res.text)
 
 def repl(m):
@@ -36,8 +42,8 @@ with open(orig_tr_dir + '/' + etcs_file, 'r', encoding='utf8') as csvfile:
 en_stat = {}
 kr_stat = {}
 
-kr_stats = get_request(URL)
-en_stats = get_request(EN_URL)
+kr_stats = get_request_kr(URL)
+en_stats = get_request_en(EN_URL)
 
 en_stat_list = {}
 kr_stat_list = {}

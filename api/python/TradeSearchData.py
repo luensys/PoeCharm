@@ -1,6 +1,7 @@
 import requests
 import json
 from datetime import datetime
+import cloudscraper
 
 STATS_KO_URL = 'https://poe.game.daum.net/api/trade/data/stats'
 STATS_EN_URL = 'https://www.pathofexile.com/api/trade/data/stats'
@@ -20,8 +21,13 @@ StaticEN = 'StaticEN.txt'
 ItemsKO = 'ItemsKO.txt'
 ItemsEN = 'ItemsEN.txt'
 
-def get_request(url):
-  res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
+def get_request_kr(url):
+  res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'}, verify=False)
+  return json.loads(res.text)
+
+def get_request_en(url):
+  scraper = cloudscraper.create_scraper(delay=10,   browser={'custom': 'ScraperBot/1.0',})
+  res = scraper.get(url)
   return json.loads(res.text)
 
 def write_txt(json_data, filename):
@@ -56,8 +62,8 @@ def entries_remake(data):
   return entries
 
 # Filter 정보 업데이트
-kr_stats = get_request(STATS_KO_URL)
-en_stats = get_request(STATS_EN_URL)
+kr_stats = get_request_kr(STATS_KO_URL)
+en_stats = get_request_en(STATS_EN_URL)
 
 kr_stat_list = {}
 en_stat_list = {}
@@ -95,8 +101,8 @@ write_txt(en_stats, FilterEN)
 
 
 # Static 정보 업데이트
-kr_statics = get_request(STATIC_KO_URL)
-en_statics = get_request(STATIC_EN_URL)
+kr_statics = get_request_kr(STATIC_KO_URL)
+en_statics = get_request_en(STATIC_EN_URL)
 
 for idx, en_val in enumerate(en_statics['result']):
   # result 안의 배열 Pseudo, Explicit 등
@@ -129,8 +135,8 @@ write_txt(en_statics, StaticEN)
 
 # Items 정보 업데이트
 
-kr_items = get_request(ITEMS_KO_URL)
-en_items = get_request(ITEMS_EN_URL)
+kr_items = get_request_kr(ITEMS_KO_URL)
+en_items = get_request_en(ITEMS_EN_URL)
 
 for idx, en_val in enumerate(en_items['result']):
   # result 안의 배열 Pseudo, Explicit 등
