@@ -4,6 +4,7 @@ import re
 import csv
 from bs4 import BeautifulSoup as bs
 import more_itertools as mit
+import cloudscraper
 
 orig_tr_dir = '../../PoeCharm/Pob/translate_kr'
 tree_dn_file = 'tree_dn.csv'
@@ -16,7 +17,12 @@ result_dir = '../../translator/translate_kr'
 passive_pattern = re.compile(r"passiveSkillTreeData\s+=\s+(\{(.|\n)*?\});\n")
 
 def get_request(url):
-  response = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'})
+  scraper = cloudscraper.create_scraper(delay=10,   browser={'custom': 'ScraperBot/1.0',})
+  response = scraper.get(url)
+  return bs(response.text, 'html.parser')
+
+def get_request1(url):
+  response = requests.get(url, headers={'user-agent': 'Mozilla/5.0'}, verify=False)
   return bs(response.text, 'html.parser')
 
 def get_json(data):
@@ -64,7 +70,7 @@ with open(orig_tr_dir + '/' + stat_description_file, 'r', encoding='utf8') as cs
 
 
 
-kr_soup = get_request('https://poe.game.daum.net/passive-skill-tree')
+kr_soup = get_request1('https://poe.game.daum.net/passive-skill-tree')
 en_soup = get_request('https://www.pathofexile.com/passive-skill-tree')
 
 kr_node = get_json(kr_soup)

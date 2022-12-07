@@ -48,7 +48,7 @@ for en_type, kr_type in gem_list.items():
   # 마지막에 놓을 경우 continue 될 때 카운트가 올라가지 않아 제일 앞으로 옮김
   count = count + 1
   # 너무 많으면 오래 걸려서 끊어서 진행하려고 skip 관련 부분 추가
-  if count < 400:
+  if count < 0:
     continue
   print(kr_type)
 
