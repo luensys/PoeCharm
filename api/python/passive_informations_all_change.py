@@ -116,9 +116,9 @@ for key, en_data in en_node.items():
         if(txt_key.strip() == en_txt.strip()):
           exist = True
           tree_rt_list[txt_key] = kr_txt
-      for txt_key, val in passive_tree_list.items():
-        if(txt_key.strip() == en_txt.strip()):
-          passive_tree_list[txt_key] = kr_txt
+      # for txt_key, val in passive_tree_list.items():
+      #   if(txt_key.strip() == en_txt.strip()):
+      #     passive_tree_list[txt_key] = kr_txt
       if(exist != True):
         tree_rt_list[en_txt] = kr_txt
       exist = False
@@ -199,10 +199,10 @@ with open(result_dir + '/' + tree_rt_file, 'w', encoding='utf8') as csvfile:
       spamwriter.writerow([key, val])
 
 # reminderText 정보 수정된 것 저장
-with open(result_dir + '/' + passive_tree_file, 'w', encoding='utf8') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
-    for key, val in passive_tree_list.items():
-      spamwriter.writerow([key, val])
+# with open(result_dir + '/' + passive_tree_file, 'w', encoding='utf8') as csvfile:
+#     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+#     for key, val in passive_tree_list.items():
+#       spamwriter.writerow([key, val])
 
 # reminderText 정보 수정된 것 statDescriptions에 저장
 with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
