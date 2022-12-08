@@ -25,8 +25,7 @@ def get_request_en(url):
   return json.loads(res.text)
 
 def post_request(url, json_data):
-  scraper = cloudscraper.create_scraper(delay=15,   browser={'custom': 'ScraperBot/1.0',})
-  res = scraper.post(url, json=json_data)
+  res = requests.post(url, json=json_data, verify=False)
   return json.loads(res.text)
 
 def reshape(lst, n):
@@ -64,8 +63,9 @@ for en_type, kr_type in gem_list.items():
 
   query = query_base.copy()
   query['query']['type'] = kr_type
-  result = post_request(EN_URL + search_uri, json_data=query)
-  if not 'result' in result:
+
+  result = post_request(URL + search_uri, json_data=query)
+  if 'result' not in result:
     print('is not response for sale')
     continue
   items = result['result']
