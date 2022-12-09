@@ -50,7 +50,8 @@ for idx, en_item in enumerate(en_items['result']):
           elif en_item['id'] == 'flasks':
             flasks[en_val1['text']] = val1['text']
           elif en_item['id'] == 'gems':
-            gems[en_val1['text']] = val1['text']
+            gem_en_txt = en_val1['text'].replace(" Support", "")
+            gems[gem_en_txt] = val1['text']
           elif en_item['id'] == 'jewels':
             jewels[en_val1['text']] = val1['text']
           elif en_item['id'] == 'weapons':
