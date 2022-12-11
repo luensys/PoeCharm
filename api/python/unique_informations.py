@@ -71,10 +71,8 @@ for en_type, kr_type in unique_list.items():
   # 너무 많으면 오래 걸려서 끊어서 진행하려고 skip 관련 부분 추가
   # if count > 20:
   #   continue
-  print(count, kr_type)
-
-  # 마지막에 놓을 경우 연속으로 continue 되는 상황 발생 시 api 서버에서 ban 당해 앞으로 옮김
-  time.sleep(15)
+  print(str(count) + ' / ' + str(len(unique_list)))
+  print(kr_type)
   
   query = query_base.copy()
   query['query']['term'] = en_type
@@ -88,6 +86,8 @@ for en_type, kr_type in unique_list.items():
 
   if len(fetchs) < 1:
     print('is not for sale')
+    # 확인 완료 후 무조건 15초 딜레이
+    time.sleep(15)
     continue
   fetch = fetchs[0]
   en_info = get_request_en(EN_URL + fetch_uri + ','.join(fetch))
@@ -161,6 +161,9 @@ for en_type, kr_type in unique_list.items():
         for key, val in etc_list.items():
           spamwriter.writerow([key, val])
     print(count, 'file saved')
+
+  # 확인 완료 후 무조건 15초 딜레이
+  time.sleep(15)
 
 
 # 유니크 정보 수정된 것 저장

@@ -57,10 +57,8 @@ for en_type, kr_type in gem_list.items():
   # 너무 많으면 오래 걸려서 끊어서 진행하려고 skip 관련 부분 추가
   if count < 0:
     continue
+  print(str(count) + ' / ' + str(len(gem_list)))
   print(kr_type)
-
-  # 마지막에 놓을 경우 연속으로 continue 되는 상황 발생 시 api 서버에서 ban 당해 앞으로 옮김
-  time.sleep(15)
 
   query = query_base.copy()
   query['query']['type'] = kr_type
@@ -75,6 +73,8 @@ for en_type, kr_type in gem_list.items():
 
   if len(fetchs) < 1:
     print('is not for sale')
+    # 위치를 마지막 쪽으로 옮김
+    time.sleep(15)
     continue
   fetch = fetchs[0]
   en_info = get_request_en(EN_URL + fetch_uri + ','.join(fetch))
@@ -97,6 +97,9 @@ for en_type, kr_type in gem_list.items():
           desc_list[key] = kr_txt
   else:
     print('item not exists')
+  
+  # 위치를 마지막 쪽으로 옮김
+  time.sleep(15)
 
 # 젬 정보 수정된 것 저장
 with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
