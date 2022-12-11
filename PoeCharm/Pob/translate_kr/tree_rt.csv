@@ -124,3 +124,5 @@
 "(Upfront Costs are all Costs that are not paid per-second)","(초기 비용은 초 단위로 지불되지 않는 모든 소모를 의미합니다.)"
 "(Chill reduces Enemy Action Speed for 2 seconds)","(""냉각""은 적의 동작 속도를 2초 동안 감소시킵니다)"
 "(Chilled Ground, Creeping Frost, Frost Shield, and Vortices are Chilling Areas)","(얼음 지대, 엄습하는 서리, 서리 방패, 소용돌이는 ""냉각 지역""입니다)"
+"(The buff still applies to you after the Ancestor Totem ceases to be Active)","(선대의 토템이 비활성화된 후에도 버프는 여전히 적용됩니다.)"
+"(Targets take 25% more Damage from Bleeding, and Bleeding on them expires 25% more quickly, per Rupture affecting them. Up to 3 Ruptures can affect a target, lasting 3 seconds each)","(대상이 보유한 파열 하나당 대상이 출혈로 받는 피해가 25% 증폭되고, 이 대상에게 걸린 출혈이 25% 빨리 만료됩니다. 파열은 하나의 대상에게 최대 3개 걸릴 수 있으며 각각 3초 동안 지속됩니다.)"

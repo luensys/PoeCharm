@@ -6,6 +6,8 @@ import cloudscraper
 URL = 'https://poe.game.daum.net/api/trade/data/items'
 EN_URL = 'https://www.pathofexile.com/api/trade/data/items'
 
+result_dir = '../../translator/translate_kr'
+
 def get_request_kr(url):
   res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'}, verify=False)
   return json.loads(res.text)
@@ -61,37 +63,37 @@ for idx, en_item in enumerate(en_items['result']):
         print(idx1, en_val1)
 
 
-with open('../uniques_from_api.csv', 'w', encoding='utf8') as csvfile:
+with open(result_dir + '/' + 'uniques_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in uniques.items():
       spamwriter.writerow([key, val])
 
-with open('../armours_from_api.csv', 'w', encoding='utf8') as csvfile:
+with open(result_dir + '/' + 'armours_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in armours.items():
       spamwriter.writerow([key, val])
 
-with open('../accessories_from_api.csv', 'w', encoding='utf8') as csvfile:
+with open(result_dir + '/' + 'accessories_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in accessories.items():
       spamwriter.writerow([key, val])
 
-with open('../flasks_from_api.csv', 'w', encoding='utf8') as csvfile:
+with open(result_dir + '/' + 'flasks_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in flasks.items():
       spamwriter.writerow([key, val])
 
-with open('../gems_from_api.csv', 'w', encoding='utf8') as csvfile:
+with open(result_dir + '/' + 'gems_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in gems.items():
       spamwriter.writerow([key, val])
 
-with open('../jewels_from_api.csv', 'w', encoding='utf8') as csvfile:
+with open(result_dir + '/' + 'jewels_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in jewels.items():
       spamwriter.writerow([key, val])
 
-with open('../weapons_from_api.csv', 'w', encoding='utf8') as csvfile:
+with open(result_dir + '/' + 'weapons_from_api.csv', 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in weapons.items():
       spamwriter.writerow([key, val])

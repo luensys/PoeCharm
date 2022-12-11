@@ -7,7 +7,8 @@ import cloudscraper
 
 URL = 'https://poe.game.daum.net/api/trade'
 EN_URL = 'https://www.pathofexile.com/api/trade'
-search_uri = '/search/Standard'
+search_uri = '/search/Sanctum'
+# search_uri = '/search/Standard'
 item_info_uri = '/data/items'
 fetch_uri = '/fetch/'
 orig_tr_dir = '../../PoeCharm/Pob/translate_kr'
