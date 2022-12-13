@@ -92,9 +92,15 @@ for en_type, kr_type in gem_list.items():
       en_txt = re.sub(r'([0-9]+[.,]*)+', '{0}', en_info['result'][0]['item']['explicitMods'][idx])
       kr_txt = re.sub(r'([0-9]+[.,]*)+', '{0}', kr_info['result'][0]['item']['explicitMods'][idx])
 
+      exist = False
       for key, val in desc_list.items():
         if(key.strip() == en_txt.strip()):
+          exit = True
           desc_list[key] = kr_txt
+
+      if exit == False :
+        desc_list[en_txt.trim()] = kr_txt.trim();
+        
   else:
     print('item not exists')
   
