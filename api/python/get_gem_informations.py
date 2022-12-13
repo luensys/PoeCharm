@@ -95,11 +95,17 @@ for en_type, kr_type in gem_list.items():
       exist = False
       for key, val in desc_list.items():
         if(key.strip() == en_txt.strip()):
-          exit = True
+          exist = True
           desc_list[key] = kr_txt
+          # print(key.trim())
+          # print(kr_txt.trim())
+          
 
-      if exit == False :
-        desc_list[en_txt.trim()] = kr_txt.trim();
+      if exist == False :
+        print('new description')
+        # print(en_txt.strip())
+        # print(kr_txt.strip())
+        desc_list[en_txt.strip()] = kr_txt.strip();
         
   else:
     print('item not exists')
