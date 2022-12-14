@@ -24054,7 +24054,7 @@
 "Exerted Attacks Trigger a Supported Spell with their first Melee Hit","전력 공격 시 첫 근접 명중이 보조 대상 주문 발동"
 "Exerted Attacks have {0}% increased Critical Strike Chance","Exerted Attacks have {0}% increased Critical Strike Chance"
 "Exerted Attacks have {0}% reduced Critical Strike Chance","Exerted Attacks have {0}% reduced Critical Strike Chance"
-"Exerted Attacks have {0}% to Critical Strike Multiplier","Exerted Attacks have {0}% to Critical Strike Multiplier"
+"Exerted Attacks have {0}% to Critical Strike Multiplier","전력 공격의 치명타 피해 배율 {0}%"
 "{0}% chance to apply an additional Withered Debuff when inflicting Withered","{0}% chance to apply an additional Withered Debuff when inflicting Withered"
 "Can roll Totem Modifiers","Can roll Totem Modifiers"
 "{0}% increased Unveiled Modifier magnitudes","장막 속성 부여 규모 {0}% 증가"
@@ -24959,7 +24959,7 @@
 "Trigger this Skill when you Hit a Rare or Unique Enemy and have no Mark","Trigger this Skill when you Hit a Rare or Unique Enemy and have no Mark"
 "{0}% more Damage with Hits and Ailments for each Cast of this Spell currently waiting","이 주문의 대기 중인 시전 하나당 명중 및 상태 이상 피해 {0}% 증폭"
 "{0}% less Damage with Hits and Ailments for each Cast of this Spell currently waiting","{0}% less Damage with Hits and Ailments for each Cast of this Spell currently waiting"
-"Exerted Attacks have {0}% to Critical Strike Chance","Exerted Attacks have {0}% to Critical Strike Chance"
+"Exerted Attacks have {0}% to Critical Strike Chance","전력 공격의 치명타 확률 {0}%"
 "{0} to maximum Blade Flurry stages","{0} to maximum Blade Flurry stages"
 "Commanded leadership over {0} warriors under Akoya","아코야 휘하 전사 {0}명에게 지휘권 행사"
 "Can have {0} additional Enchantment Modifiers","추가 인챈트 속성 부여 {0}회 가능"
@@ -25803,3 +25803,12 @@
 "Rare Breach Monsters drop additional Currency Items","Rare Breach Monsters drop additional Currency Items"
 "Take Physical Damage equal to {0}% of Life plus {0}% of Energy Shield per Second per","Take Physical Damage equal to {0}% of Life plus {0}% of Energy Shield per Second per"
 "{0}% Blood in the Blood Crucible while you are able to Shift into Nightmare","{0}% Blood in the Blood Crucible while you are able to Shift into Nightmare"
+"Burning Ground deals {0}% of the Fire Damage per Second of strongest Ignite on Enemy
+Caustic Ground deals {1}% of the Chaos Damage per Second of strongest Poison on Enemy
+Can create each Ground effect no more than once each second","용암 지대가 적에게 유발된 가장 강한 점화의 초당 화염 피해의 {0}%를 줌
+부식성 지대가 적에게 유발된 가장 강한 중독의 초당 카오스 피해의 {1}%를 줌
+각 지대 효과는 1초마다 최대 1번 만들 수 있음"
+"Gain {0} Flask Charge when you Hit a Cursed Enemy, no more than once every {1} seconds","저주받은 적 명중 시 플라스크 {0} 충전, 1초마다 최대 1번 충전"
+"Buff is removed to Exert the next Melee Attack you perform
+Attacks Exerted by this Skill cannot be Exerted by other Skills","버프가 제거되고 다음 근접 공격이 전력 공격
+이 스킬로 인한 전력 공격은 다른 스킬로 인해 전력 공격이 될 수 없음"

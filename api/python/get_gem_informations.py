@@ -3,6 +3,7 @@ import json
 import time
 import csv
 import re
+import more_itertools as mit
 import cloudscraper
 
 URL = 'https://poe.game.daum.net/api/trade'
@@ -15,6 +16,7 @@ orig_tr_dir = '../../PoeCharm/Pob/translate_kr'
 gem_file = 'Items_Gems.txt.csv'
 stat_description_file = 'statDescriptions.csv'
 result_dir = '../../translator/translate_kr'
+etcs_file = 'etcs.csv'
 
 def get_request_kr(url):
   res = requests.get(url, headers={'user-agent': 'Mozilla/5.0', 'Content-Type': 'application/json'}, verify=False)
@@ -32,12 +34,24 @@ def post_request(url, json_data):
 def reshape(lst, n):
     return [lst[i*n:(i+1)*n] for i in range(len(lst)//n)]
 
+def repl(m):
+  return next(repl.v)
+repl.v=mit.seekable(('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}'))
+
+def number_to_blanket(text):
+  result = re.sub('[+-]?(?=\d)(\d*\.?\d*)', repl, text)
+  repl.v.seek(0)
+  return result
+
+
+
 # https://poe-query.vercel.app/ 참조
 query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}]},"sort":{"price":"asc"}}
 
 
 gem_list = {}
 desc_list = {}
+etcs_list = {}
 with open(orig_tr_dir + '/' + gem_file, 'r', encoding='utf8') as csvfile:
   read_csv = csv.reader(csvfile)
   for row in read_csv:
@@ -47,6 +61,11 @@ with open(orig_tr_dir + '/' + stat_description_file, 'r', encoding='utf8') as cs
   read_csv = csv.reader(csvfile)
   for row in read_csv:
     desc_list[row[0]] = row[1]
+
+with open(orig_tr_dir + '/' + etcs_file, 'r', encoding='utf8') as csvfile:
+  read_csv = csv.reader(csvfile)
+  for row in read_csv:
+    etcs_list[row[0]] = row[1]
 
 # gem_list = {"Animate Weapon": "무기 기동"}
 
@@ -80,6 +99,8 @@ for en_type, kr_type in gem_list.items():
   en_info = get_request_en(EN_URL + fetch_uri + ','.join(fetch))
   kr_info = get_request_kr(URL + fetch_uri + ','.join(fetch))
   
+  # print(en_info['result'][0]['item']['secDescrText'])
+  # print(kr_info['result'][0]['item'])
   # print(kr_info['result'][0]['item']['secDescrText'])
   # print(kr_info['result'][0]['item']['explicitMods'])
   # print(kr_info['result'][0]['item']['descrText'])
@@ -89,32 +110,49 @@ for en_type, kr_type in gem_list.items():
 
   if 'result' in kr_info and 'item' in en_info['result'][0] and 'explicitMods' in en_info['result'][0]['item']:
     for idx in range(len(kr_info['result'][0]['item']['explicitMods'])):
-      en_txt = re.sub(r'([0-9]+[.,]*)+', '{0}', en_info['result'][0]['item']['explicitMods'][idx])
-      kr_txt = re.sub(r'([0-9]+[.,]*)+', '{0}', kr_info['result'][0]['item']['explicitMods'][idx])
+      en_txt = number_to_blanket(en_info['result'][0]['item']['explicitMods'][idx])
+      kr_txt = number_to_blanket(kr_info['result'][0]['item']['explicitMods'][idx])
 
       exist = False
       for key, val in desc_list.items():
         if(key.strip() == en_txt.strip()):
           exist = True
           desc_list[key] = kr_txt
-          # print(key.trim())
-          # print(kr_txt.trim())
           
-
       if exist == False :
         print('new description')
-        # print(en_txt.strip())
-        # print(kr_txt.strip())
+        print(en_txt.strip())
+        print(kr_txt.strip())
         desc_list[en_txt.strip()] = kr_txt.strip();
+
+      etcs_list[en_info['result'][0]['item']['secDescrText'].strip()] = kr_info['result'][0]['item']['secDescrText'].strip();
         
   else:
     print('item not exists')
+
+  # count 수에 따라 한 번씩 저장 함
+  if ((count % 10) == 0):
+    # 젬 정보 수정된 것 저장
+    with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+        for key, val in desc_list.items():
+          spamwriter.writerow([key, val])
+    with open(result_dir + '/' + etcs_file, 'w', encoding='utf8') as csvfile:
+        spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+        for key, val in etcs_list.items():
+          spamwriter.writerow([key, val])
   
   # 위치를 마지막 쪽으로 옮김
   time.sleep(15)
 
+  
 # 젬 정보 수정된 것 저장
 with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
     for key, val in desc_list.items():
       spamwriter.writerow([key, val])
+with open(result_dir + '/' + etcs_file, 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in etcs_list.items():
+      spamwriter.writerow([key, val])
+  

@@ -100,9 +100,9 @@ for en_type, kr_type in unique_list.items():
       print(en_info['result'][0]['item']['implicitMods'])
       print(kr_info['result'][0]['item']['implicitMods'])
       for idx in range(len(kr_info['result'][0]['item']['implicitMods'])):
-        en_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, en_info['result'][0]['item']['implicitMods'][idx])
+        en_txt = re.sub('[+-]?(?=\d)(\d*\.?\d*)', repl, en_info['result'][0]['item']['implicitMods'][idx])
         repl.v.seek(0)
-        kr_txt = re.sub('(?=\d)(\d*\.?\d*)', repl, kr_info['result'][0]['item']['implicitMods'][idx])
+        kr_txt = re.sub('[+-]?(?=\d)(\d*\.?\d*)', repl, kr_info['result'][0]['item']['implicitMods'][idx])
         repl.v.seek(0)
 
         exists = 0
@@ -165,9 +165,16 @@ for en_type, kr_type in unique_list.items():
   # 확인 완료 후 무조건 15초 딜레이
   time.sleep(15)
 
-
 # 유니크 정보 수정된 것 저장
-# with open(result_dir + '/' + stat_description_file, 'w') as csvfile:
-#     spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
-#     for key, val in desc_list.items():
-#       spamwriter.writerow([key, val])
+with open(result_dir + '/' + stat_description_file, 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in desc_list.items():
+      spamwriter.writerow([key, val])
+with open(result_dir + '/' + etcs_file, 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in etcs_list.items():
+      spamwriter.writerow([key, val])
+with open(result_dir + '/' + temp_file, 'w', encoding='utf8') as csvfile:
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL, escapechar=None)
+    for key, val in etc_list.items():
+      spamwriter.writerow([key, val])
