@@ -105,63 +105,69 @@ def number_to_blanket(text):
   repl.v.seek(0)
   return result
 
-def desc_change(en_txt, kr_txt):
-  en_txt = number_to_blanket(en_txt)
-  kr_txt = number_to_blanket(kr_txt)
+def desc_change(en_txt, kr_txt, insertion):
+  en_txt = number_to_blanket(en_txt).strip()
+  kr_txt = number_to_blanket(kr_txt).strip()
 
   # 수정할 내용이 있는지 확인
   exist = False
-  if en_txt.strip() in desc_list:
+  if en_txt in desc_list:
     desc_list[en_txt] = kr_txt
     exist = True
   else :
     for en_key in desc_list:
       if en_key.lower() == en_txt.lower():
-        desc_keys[desc_keys.index(en_key)] = en_txt.strip()
+        desc_keys[desc_keys.index(en_key)] = en_txt
         desc_list[en_key] = kr_txt
         exist = True
         break
 
   # 수정할 내용이 없을 경우 데이터 추가
-  if exist == False:
+  if exist == False and insertion == True:
     desc_list[en_txt] = kr_txt
     desc_keys.append(en_txt)
 
-def etcs_change(en_txt, kr_txt):
-  en_txt = number_to_blanket(en_txt)
-  kr_txt = number_to_blanket(kr_txt)
+def etcs_change(en_txt, kr_txt, insertion):
+  en_txt = number_to_blanket(en_txt).strip()
+  kr_txt = number_to_blanket(kr_txt).strip()
 
   # 수정할 내용이 있는지 확인
   # etcs의 경우 수정할 경우만 수정하고 추가는 하지 않음
   exist = False
-  if en_txt.strip() in etcs_list:
+  if en_txt in etcs_list:
     etcs_list[en_txt] = kr_txt
     exist = True
   else :
     for en_key in etcs_list:
       if en_key.lower() == en_txt.lower():
-        etcs_keys[etcs_keys.index(en_key)] = en_txt.strip()
+        print(en_key)
+        etcs_keys[etcs_keys.index(en_key)] = en_txt
         etcs_list[en_key] = kr_txt
         exist = True
         break
 
-def check_desc_list(en_txt, kr_txt):
-  en_txts = en_txt.splitlines()
-  kr_txts = kr_txt.splitlines()
-  if len(en_txts) > 0 :
-    for idx in range(len(en_txts)) :
-      desc_change(en_txts[idx], kr_txts[idx])
-  else :
-    desc_change(en_txt, kr_txt)
+  # 수정할 내용이 없을 경우 데이터 추가
+  if exist == False and insertion == True:
+    etcs_list[en_txt] = kr_txt
+    etcs_keys.append(en_txt)
 
-def check_etcs_list(en_txt, kr_txt):
+def check_desc_list(en_txt, kr_txt, insertion):
   en_txts = en_txt.splitlines()
   kr_txts = kr_txt.splitlines()
   if len(en_txts) > 0 :
     for idx in range(len(en_txts)) :
-      etcs_change(en_txts[idx], kr_txts[idx])
+      desc_change(en_txts[idx], kr_txts[idx], insertion)
   else :
-    etcs_change(en_txt, kr_txt)
+    desc_change(en_txt, kr_txt, insertion)
+
+def check_etcs_list(en_txt, kr_txt, insertion):
+  en_txts = en_txt.splitlines()
+  kr_txts = kr_txt.splitlines()
+  if len(en_txts) > 0 :
+    for idx in range(len(en_txts)) :
+      etcs_change(en_txts[idx], kr_txts[idx], insertion)
+  else :
+    etcs_change(en_txt, kr_txt, insertion)
 
 
 
@@ -225,8 +231,8 @@ for en_type, kr_type in item_list.items():
   if 'result' in kr_info and 'item' in en_info['result'][0] and 'explicitMods' in en_info['result'][0]['item']:
     print('item explicitMods exists')
     for idx in range(len(kr_info['result'][0]['item']['explicitMods'])):
-      check_desc_list(en_info['result'][0]['item']['explicitMods'][idx], kr_info['result'][0]['item']['explicitMods'][idx])
-      check_etcs_list(en_info['result'][0]['item']['explicitMods'][idx], kr_info['result'][0]['item']['explicitMods'][idx])
+      check_desc_list(en_info['result'][0]['item']['explicitMods'][idx], kr_info['result'][0]['item']['explicitMods'][idx], True)
+      check_etcs_list(en_info['result'][0]['item']['explicitMods'][idx], kr_info['result'][0]['item']['explicitMods'][idx], False)
   else:
     print('item explicitMods not exists')
 
@@ -234,10 +240,19 @@ for en_type, kr_type in item_list.items():
   if 'result' in kr_info and 'item' in en_info['result'][0] and 'implicitMods' in en_info['result'][0]['item']:
     print('item implicitMods exists')
     for idx in range(len(kr_info['result'][0]['item']['implicitMods'])):
-      check_desc_list(en_info['result'][0]['item']['implicitMods'][idx], kr_info['result'][0]['item']['implicitMods'][idx])
-      check_etcs_list(en_info['result'][0]['item']['implicitMods'][idx], kr_info['result'][0]['item']['implicitMods'][idx])
+      check_desc_list(en_info['result'][0]['item']['implicitMods'][idx], kr_info['result'][0]['item']['implicitMods'][idx], True)
+      check_etcs_list(en_info['result'][0]['item']['implicitMods'][idx], kr_info['result'][0]['item']['implicitMods'][idx], False)
   else:
     print('item implicitMods not exists')
+
+  # 아이템(젬) 설명 문구가 있을 경우 업데이트 하도록 함
+  if 'result' in kr_info and 'item' in en_info['result'][0] and 'secDescrText' in en_info['result'][0]['item']:
+    print('item secDescrText exists')
+    for idx in range(len(kr_info['result'][0]['item']['secDescrText'])):
+      check_etcs_list(en_info['result'][0]['item']['secDescrText'], kr_info['result'][0]['item']['secDescrText'], True)
+  else:
+    print('item secDescrText not exists')
+
 
 
   # 젬 정보 수정된 것 저장 10번마다 한 번씩 저장하도록 함
