@@ -21,7 +21,7 @@ if sys.argv[1] != 'gem' and sys.argv[1] != 'unique':
 
 # 어떤 아이템, 몇 개의 아이템을 작업할 것인지 설정
 ItemType = sys.argv[1]
-StartCount = 3
+StartCount = 0
 MaxCount = 0
 
 # 한글, 영문 api 주소
@@ -122,10 +122,11 @@ def desc_change(en_txt, kr_txt, insertion):
   else :
     for en_key in desc_list:
       if en_key.lower() == en_txt.lower():
-        desc_keys[desc_keys.index(en_key)] = en_txt
-        desc_list[en_key] = kr_txt
-        exist = True
-        break
+        if en_key in desc_keys :
+          desc_keys[desc_keys.index(en_key)] = en_txt
+          desc_list[en_key] = kr_txt
+          exist = True
+          break
 
   # 수정할 내용이 없을 경우 데이터 추가
   if exist == False and insertion == True:
