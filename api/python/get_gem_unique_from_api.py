@@ -32,7 +32,10 @@ item_info_uri = '/data/items'
 fetch_uri = '/fetch/'
 
 # Trade 검색 쿼리 https://poe-query.vercel.app/ 참조
-query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}]},"sort":{"price":"asc"}}
+if ItemType == 'gem' :
+  query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}],"filters": {"misc_filters": {"filters": {"quality": {"min": 10,"max": None}},"disabled": False}}},"sort":{"price":"asc"}}
+else :
+  query_base = {"query":{"status":{"option":"online"},"stats":[{"type":"and","filters":[],"disabled":False}]},"sort":{"price":"asc"}}
 
 # 각 폴더 정의
 orig_tr_dir = '../../PoeCharm/Pob/translate_kr'
@@ -82,6 +85,7 @@ def get_request_kr(url):
 def get_request_en(url):
   scraper = cloudscraper.create_scraper(delay=10,   browser={'custom': 'ScraperBot/1.0',})
   res = scraper.get(url)
+
   return json.loads(res.text)
 
 def post_request_kr(url, json_data):
@@ -140,7 +144,6 @@ def etcs_change(en_txt, kr_txt, insertion):
   else :
     for en_key in etcs_list:
       if en_key.lower() == en_txt.lower():
-        print(en_key)
         etcs_keys[etcs_keys.index(en_key)] = en_txt
         etcs_list[en_key] = kr_txt
         exist = True
@@ -171,7 +174,7 @@ def check_etcs_list(en_txt, kr_txt, insertion):
 
 
 
-# item_list = {"Energy Blade": "에너지 칼날"}
+# item_list = {"Armageddon Brand": "종말의 낙인"}
 # item_list = {"Astramentis": "별의 보석(Astramentis)"}
 
 # 아이템 리스트 순서대로 올라가면서 데이터를 가져옴
