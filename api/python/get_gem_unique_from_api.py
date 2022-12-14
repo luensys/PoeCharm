@@ -21,6 +21,7 @@ if sys.argv[1] != 'gem' and sys.argv[1] != 'unique':
 
 # 어떤 아이템, 몇 개의 아이템을 작업할 것인지 설정
 ItemType = sys.argv[1]
+StartCount = 3
 MaxCount = 0
 
 # 한글, 영문 api 주소
@@ -174,7 +175,7 @@ def check_etcs_list(en_txt, kr_txt, insertion):
 
 
 
-# item_list = {"Armageddon Brand": "종말의 낙인"}
+# item_list = {"Heavy Strike": "묵직한 타격"}
 # item_list = {"Astramentis": "별의 보석(Astramentis)"}
 
 # 아이템 리스트 순서대로 올라가면서 데이터를 가져옴
@@ -189,6 +190,8 @@ for en_type, kr_type in item_list.items():
 
   # 원하는 횟수만큼 동작
   if MaxCount != 0 and count > MaxCount:
+    continue
+  if StartCount != 0 and count < StartCount:
     continue
 
   # 한글 api에서 데이터를 불러옴
