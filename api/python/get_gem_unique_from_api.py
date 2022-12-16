@@ -159,7 +159,7 @@ def etcs_change(en_txt, kr_txt, insertion):
 def check_desc_list(en_txt, kr_txt, insertion):
   en_txts = en_txt.splitlines()
   kr_txts = kr_txt.splitlines()
-  if len(en_txts) > 0 :
+  if(len(en_txts) > 1) and (len(kr_txts) > 1) :
     for idx in range(len(en_txts)) :
       desc_change(en_txts[idx], kr_txts[idx], insertion)
   else :
@@ -168,7 +168,7 @@ def check_desc_list(en_txt, kr_txt, insertion):
 def check_etcs_list(en_txt, kr_txt, insertion):
   en_txts = en_txt.splitlines()
   kr_txts = kr_txt.splitlines()
-  if len(en_txts) > 0 :
+  if(len(en_txts) > 1) and (len(kr_txts) > 1) :
     for idx in range(len(en_txts)) :
       etcs_change(en_txts[idx], kr_txts[idx], insertion)
   else :
@@ -176,8 +176,8 @@ def check_etcs_list(en_txt, kr_txt, insertion):
 
 
 
-# item_list = {"Heavy Strike": "묵직한 타격"}
-# item_list = {"Astramentis": "별의 보석(Astramentis)"}
+# item_list = {"Flame Surge": "화염 쇄도"}
+# item_list = {"Replica Maloney's Mechanism": "말로니의 기계 장치 모조품(Replica Maloney's Mechanism)"}
 
 # 아이템 리스트 순서대로 올라가면서 데이터를 가져옴
 count = 0
@@ -224,7 +224,7 @@ for en_type, kr_type in item_list.items():
 
   # 정보 확인을 위한 출력 부분
   # print('아이템 정보 전체')
-  # print(kr_info['result'][0]['item'])
+  # print(en_info['result'][0]['item'])
   # print('한글 정보')
   # print(kr_info['result'][0]['item']['secDescrText'])
   # print(kr_info['result'][0]['item']['explicitMods'])
